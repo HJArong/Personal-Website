@@ -103,7 +103,7 @@ export default {
     }
     
     @media (max-width: $breakpoint-sm) {
-      gap: 4rem;
+      gap: 12rem;
     }
   }
   
@@ -166,7 +166,7 @@ export default {
     gap: 12rem;
     
     @media (max-width: $breakpoint-lg) {
-      gap: 8rem;
+      gap: 10rem;
     }
     
     @media (max-width: $breakpoint-md) {
@@ -176,7 +176,7 @@ export default {
     }
     
     @media (max-width: $breakpoint-sm) {
-      gap: 1.5rem;
+      gap: 1rem;
     }
   }
   
@@ -223,8 +223,16 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    //transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     z-index: 3;
+
+    @media (max-width: $breakpoint-md) {
+      position: static;
+      top: 0;
+      transform: none;
+      order: -1;
+      width: 100%;
+    }
   }
   
   &__portrait {
@@ -247,6 +255,9 @@ export default {
     }
     
     @media (max-width: $breakpoint-md) {
+      margin: auto;
+      animation: none;
+      display: flex;
       width: 200px;
       height: 200px;
     }
@@ -254,6 +265,7 @@ export default {
     @media (max-width: $breakpoint-sm) {
       width: 160px;
       height: 160px;
+      
     }
   }
   
@@ -279,6 +291,9 @@ export default {
     @media (max-width: $breakpoint-md) {
       width: 250px;
       height: 250px;
+      transform: unset;
+      left: 50%;
+      top: 17%;
     }
     
     @media (max-width: $breakpoint-sm) {
@@ -441,16 +456,16 @@ export default {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-md) {
   .hero {
-    padding-top: 80px;
+    padding-top: unset;
     
     &__content {
       gap: 2rem;
     }
     
     &__name {
-      font-size: 2.5rem;
+      font-size: 7.5rem;
     }
     
     &__portrait {
