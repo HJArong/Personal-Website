@@ -116,17 +116,20 @@ export default {
   }
   
   &__logo-img {
-    height: 40px;
+    height: 32px;
     width: auto;
     transition: transform $transition-normal;
     
     &:hover {
       transform: scale(1.05);
     }
+
+    @media (max-width: $breakpoint-sm) {
+      height: 24px !important;
+    }
   }
   
   &__nav {
-    flex: 1;
     display: flex;
     justify-content: center;
     
@@ -231,7 +234,7 @@ export default {
   // Mobile responsive
   @media (max-width: $breakpoint-sm) {
     &__container {
-      padding: $spacing-sm 0;
+      padding: 0 16px;
     }
     
     &__logo-img {
