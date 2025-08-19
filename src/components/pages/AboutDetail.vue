@@ -30,7 +30,7 @@
               <h3>Education</h3>
               <div class="about-detail__education-item">
                 <h4>Bachelor of Science in Computer Science</h4>
-                <p>University Name • 20XX - 20XX</p>
+                <p>University of the Philippines Cebu • 2018 - 2022</p>
                 <p>Focused on software engineering, algorithms, and human-computer interaction</p>
               </div>
             </div>
@@ -95,7 +95,7 @@
                  
                  <div class="about-detail__skill-item">
                    <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Figma, Sketch, Adobe Creative Suite</span>
+                     <span class="about-detail__skill-name">Figma</span>
                      <span class="about-detail__skill-level">92%</span>
                    </div>
                    <div class="about-detail__skill-meter">
@@ -111,10 +111,10 @@
                  <div class="about-detail__skill-item">
                    <div class="about-detail__skill-info">
                      <span class="about-detail__skill-name">Frontend Development (HTML, CSS, JavaScript)</span>
-                     <span class="about-detail__skill-level">88%</span>
+                     <span class="about-detail__skill-level">85%</span>
                    </div>
                    <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 88%"></div>
+                     <div class="about-detail__skill-progress" style="width: 85%"></div>
                    </div>
                  </div>
                  
@@ -141,30 +141,30 @@
                  <div class="about-detail__skill-item">
                    <div class="about-detail__skill-info">
                      <span class="about-detail__skill-name">Git & Version Control</span>
-                     <span class="about-detail__skill-level">82%</span>
+                     <span class="about-detail__skill-level">80%</span>
                    </div>
                    <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 82%"></div>
+                     <div class="about-detail__skill-progress" style="width: 80%"></div>
                    </div>
                  </div>
                  
                  <div class="about-detail__skill-item">
                    <div class="about-detail__skill-info">
                      <span class="about-detail__skill-name">Performance Optimization</span>
-                     <span class="about-detail__skill-level">78%</span>
+                     <span class="about-detail__skill-level">75%</span>
                    </div>
                    <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 78%"></div>
+                     <div class="about-detail__skill-progress" style="width: 75%"></div>
                    </div>
                  </div>
                  
                  <div class="about-detail__skill-item">
                    <div class="about-detail__skill-info">
                      <span class="about-detail__skill-name">Accessibility (WCAG)</span>
-                     <span class="about-detail__skill-level">85%</span>
+                     <span class="about-detail__skill-level">70%</span>
                    </div>
                    <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 85%"></div>
+                     <div class="about-detail__skill-progress" style="width: 70%"></div>
                    </div>
                  </div>
                </div>
@@ -345,7 +345,7 @@ export default {
   }
   
   &__section-title {
-    @include heading-style($font-size-3xl, $font-weight-normal);
+    @include subheading-style($font-size-2xl, $font-weight-normal);
     color: $text-primary;
     margin-bottom: $spacing-2xl;
     position: relative;
@@ -460,7 +460,7 @@ export default {
   
   &__philosophy-item {
     h3 {
-      @include heading-style($font-size-xl, $font-weight-normal);
+      @include subheading-accent-style($font-size-xl, $font-weight-normal);
       color: $primary-color;
       margin-bottom: $spacing-md;
     }

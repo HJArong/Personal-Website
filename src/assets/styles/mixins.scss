@@ -9,6 +9,22 @@
   color: $text-primary;
 }
 
+@mixin subheading-style($size: $font-size-base, $weight: $font-weight-normal) {
+  font-family: $font-body;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+@mixin subheading-accent-style($size: $font-size-base, $weight: $font-weight-normal) {
+  font-family: $font-body;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.2;
+  color: $primary-color;
+}
+
 @mixin body-text($size: $font-size-base, $weight: $font-weight-normal) {
   font-family: $font-body;
   font-size: $size;

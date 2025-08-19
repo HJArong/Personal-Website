@@ -261,7 +261,7 @@ export default {
   }
   
   &__info-title {
-    @include heading-style($font-size-lg, $font-weight-medium);
+    @include subheading-style($font-size-lg, $font-weight-medium);
     margin-bottom: $spacing-xs;
     color: $text-primary;
   }
@@ -283,7 +283,7 @@ export default {
   }
   
   &__form-label {
-    @include body-text($font-size-base, $font-weight-medium);
+    @include subheading-style($font-size-base, $font-weight-medium);
     display: block;
     margin-bottom: $spacing-xs;
     color: $text-primary;
