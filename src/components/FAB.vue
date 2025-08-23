@@ -56,7 +56,7 @@
         width: max-content;
         padding: 24px 0;
         border-radius: 48px;
-        box-shadow: 0 0 32px 0 rgba($primary-color, 0.3);
+        box-shadow: 0 0 32px 0 rgba($black, 0.15);
         z-index: 500;
 
         @media (max-width: $breakpoint-md) {
@@ -67,6 +67,8 @@
             transform: translateX(-50%);
             padding: 0 12px;
             border-radius: 24px;
+            border: 2px solid $primary-disabled;
+            box-shadow: 0 0 24px 0 rgba($black, 0.25);
         }
 
         

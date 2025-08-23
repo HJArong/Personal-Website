@@ -36,13 +36,24 @@
           </div>
           
           <div class="about__cta">
-            <Button variant="primary" size="large" @click="scrollToWorks">
+            <Button
+              variant="primary"
+              :size="isMobile ? 'medium' : 'large'" 
+              @click="scrollToWorks"
+            >
               View my works
             </Button>
-            <Button variant="ghost" size="large" @click="scrollToContact">
+            <Button
+              variant="ghost"
+              :size="isMobile ? 'medium' : 'large'"
+              @click="scrollToContact"
+            >
               Know more about me
             </Button>
-            <Button variant="ghost" size="large">
+            <Button
+              variant="ghost"
+              :size="isMobile ? 'medium' : 'large'" 
+            >
               My CV
             </Button>
           </div>
@@ -58,16 +69,38 @@ import Portrait from '../../images/haze-portrait.svg'
 
 export default {
   name: 'About',
+
   components: { Button },
+
   data() {
     return {
-      portrait: Portrait
+      windowWidth: window.innerWidth
     }
   },
+
+  computed: {
+    isMobile() {
+      return this.windowWidth <= 640;
+    }
+  },
+
+  mounted() {
+    window.addEventListener('resize', this.handleResize)
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
   methods: {
+    handleResize() {
+      this.windowWidth = window.innerWidth
+    },
+
     scrollToWorks() {
       this.$emit('scroll-to-section', 'works')
     },
+
     scrollToContact() {
       this.$emit('scroll-to-section', 'contact') // better than resetting hash
     },
@@ -82,7 +115,7 @@ export default {
 
 .about {
   @include section-padding;
-  padding-top: calc($spacing-3xl + 80px); // Account for fixed header
+  // padding-top: calc($spacing-3xl + 80px); // Account for fixed header
   background-color: $white;
   background: radial-gradient(circle at 50% 30%, #fff 0%, #FFE5EF 100%);
   
@@ -180,6 +213,11 @@ export default {
       margin-bottom: $spacing-lg;
       line-height: 1.7;
       color: $text-primary;
+
+      @media (max-width: $breakpoint-sm) {
+        @include body-text($font-size-base, $font-weight-normal);
+        line-height: 1.5;
+      }
       
       &:last-child {
         margin-bottom: 0;
