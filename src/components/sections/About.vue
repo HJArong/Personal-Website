@@ -145,7 +145,9 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 52px;
-    @include slide-up;
+    @include fade-in(0.8s);
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
 
     .image-container {
       position: relative;

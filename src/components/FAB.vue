@@ -53,7 +53,7 @@
         background: $white;
         top: 40%;
         right: 2%;
-        width: max-content;
+        width: 82px;
         padding: 24px 0;
         border-radius: 48px;
         box-shadow: 0 0 32px 0 rgba($black, 0.15);
@@ -69,6 +69,7 @@
             border-radius: 24px;
             border: 2px solid $primary-disabled;
             box-shadow: 0 0 24px 0 rgba($black, 0.25);
+            width: max-content;
         }
 
         
@@ -97,12 +98,13 @@
 
                 p {
                     font-size: 14px;
-                }
+                    transition-duration: 0.2s;
 
-                &.active {
-                    font-size: 2rem;
-                    font-weight: 500;
-                    color: $primary-color;
+                    &.active {
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $primary-color;
+                    }
                 }
             }
         }

@@ -24,6 +24,7 @@ import Footer from '../Footer.vue'
 
 export default {
   name: 'Home',
+
   components: {
     FAB,
     Hero,
@@ -32,14 +33,24 @@ export default {
     Contact,
     Footer
   },
+
   data() {
     return {
-      activeSection: 'about'
+      activeSection: 'about',
+      scrollHandler: null
     }
   },
+
   mounted() {
     this.setupScrollSpy()
   },
+
+  beforeUnmount() {
+    if (this.scrollHandler) {
+      window.removeEventListener('scroll', this.scrollHandler)
+    }
+  },
+
   methods: {
     handleSectionChange(sectionId) {
       this.scrollToSection(sectionId)
@@ -58,7 +69,7 @@ export default {
 
     setupScrollSpy() {
       const sections = ['about', 'works', 'contact']
-      const handleScroll = () => {
+      this.scrollHandler = () => {
         const scrollPosition = window.scrollY + window.innerHeight / 3
         for (let i = sections.length - 1; i >= 0; i--) {
           const section = document.getElementById(sections[i])
@@ -68,10 +79,7 @@ export default {
           }
         }
       }
-      window.addEventListener('scroll', handleScroll)
-      this.$once('hook:beforeDestroy', () => {
-        window.removeEventListener('scroll', handleScroll)
-      })
+      window.addEventListener('scroll', this.scrollHandler)
     }
   }
 }
