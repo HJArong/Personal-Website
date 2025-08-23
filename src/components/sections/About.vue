@@ -6,7 +6,7 @@
         <div class="about__heading">
           <div class="image-container">
             <img
-              src="../../images/haze-portrait.svg"
+              src="../../images/haze-portrait.png"
               alt="Hazel Arong Portrait"
               class="portrait"
             />
@@ -153,6 +153,8 @@ export default {
       position: relative;
 
       .portrait {
+        width: 350px;
+
         @media (max-width: $breakpoint-lg) {
           width: 300px;
         }
@@ -167,6 +169,8 @@ export default {
         top: 50%;
         left: 90%;
         width: 200px;
+        animation: move-cursor 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        pointer-events: none;
 
         @media (max-width: $breakpoint-lg) {
           width: 180px;
@@ -176,6 +180,27 @@ export default {
 
         @media (max-width: $breakpoint-sm) {
           width: 160px;
+        }
+      }
+
+      @keyframes move-cursor {
+        0% {
+          transform: translate(0, 0) rotate(-10deg);
+        }
+        20% {
+          transform: translate(-20px, -10px) rotate(0deg);
+        }
+        40% {
+          transform: translate(-40px, 10px) rotate(10deg);
+        }
+        60% {
+          transform: translate(-20px, 20px) rotate(0deg);
+        }
+        80% {
+          transform: translate(0, 0) rotate(-10deg);
+        }
+        100% {
+          transform: translate(0, 0) rotate(-10deg);
         }
       }
     }
