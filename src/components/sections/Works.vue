@@ -264,6 +264,9 @@ export default {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: $spacing-2xl;
       margin-bottom: $spacing-3xl;
+      max-width: 1000px;
+      margin: auto;
+      padding-bottom: 52px;
       
       @media (max-width: $breakpoint-md) {
         grid-template-columns: 1fr;
