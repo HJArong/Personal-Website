@@ -2,244 +2,38 @@
   <div class="about-detail">
     <div class="about-detail__container">
       <header class="about-detail__header">
-        <button class="about-detail__back-btn" @click="goBack">
+        <Button
+          variant="ghost"
+          size="medium"
+          @click="goBack"
+        >
           ← Back to Portfolio
-        </button>
+        </Button>
         <h1 class="about-detail__title">About Me</h1>
       </header>
 
-      <main class="about-detail__content">
-        <section class="about-detail__section">
-          <h2 class="about-detail__section-title">Introduction</h2>
+      <p class="wip">
+        This section is still a work in progress...
+      </p>
+
+      <section class="about-detail__section">
+        <div class="about-detail__cta">
+          <h2>Let's Connect</h2>
           <p>
-            Hi there! I'm Hazel Arong, a UX Engineer passionate about creating digital experiences 
-            that are not just functional, but delightful and meaningful. I believe that great design 
-            happens at the intersection of empathy, logic, and creativity.
+            I'm always excited to collaborate on interesting projects and connect with 
+            fellow designers and developers. Whether you want to discuss a potential 
+            project, share ideas, or just say hello, I'd love to hear from you!
           </p>
-          <p>
-            With a Computer Science background, I bring a unique perspective to UX design - 
-            combining technical understanding with human-centered design principles to create 
-            solutions that work beautifully both for users and developers.
-          </p>
-        </section>
-
-        <section class="about-detail__section">
-          <h2 class="about-detail__section-title">Background & Education</h2>
-          <div class="about-detail__background">
-            <div class="about-detail__education">
-              <h3>Education</h3>
-              <div class="about-detail__education-item">
-                <h4>Bachelor of Science in Computer Science</h4>
-                <p>University of the Philippines Cebu • 2018 - 2022</p>
-                <p>Focused on software engineering, algorithms, and human-computer interaction</p>
-              </div>
-            </div>
+          <div class="about-detail__cta-buttons">
+            <Button variant="primary" size="large" @click="scrollToContact">
+              Get in Touch
+            </Button>
+            <Button variant="ghost" size="large" @click="scrollToWorks">
+              View My Work
+            </Button>
           </div>
-        </section>
-
-                 <section class="about-detail__section">
-           <h2 class="about-detail__section-title">Skills & Expertise</h2>
-           <div class="about-detail__skills">
-             <div class="about-detail__skill-category">
-               <h3>Design</h3>
-               <div class="about-detail__skill-list">
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">User Experience (UX) Design</span>
-                     <span class="about-detail__skill-level">90%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 90%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">User Interface (UI) Design</span>
-                     <span class="about-detail__skill-level">85%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 85%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Wireframing & Prototyping</span>
-                     <span class="about-detail__skill-level">95%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 95%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">User Research & Testing</span>
-                     <span class="about-detail__skill-level">80%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 80%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Design Systems</span>
-                     <span class="about-detail__skill-level">88%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 88%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Figma</span>
-                     <span class="about-detail__skill-level">92%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 92%"></div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-             
-             <div class="about-detail__skill-category">
-               <h3>Development</h3>
-               <div class="about-detail__skill-list">
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Frontend Development (HTML, CSS, JavaScript)</span>
-                     <span class="about-detail__skill-level">85%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 85%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Vue.js, React</span>
-                     <span class="about-detail__skill-level">85%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 85%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Responsive Web Design</span>
-                     <span class="about-detail__skill-level">90%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 90%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Git & Version Control</span>
-                     <span class="about-detail__skill-level">80%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 80%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Performance Optimization</span>
-                     <span class="about-detail__skill-level">75%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 75%"></div>
-                   </div>
-                 </div>
-                 
-                 <div class="about-detail__skill-item">
-                   <div class="about-detail__skill-info">
-                     <span class="about-detail__skill-name">Accessibility (WCAG)</span>
-                     <span class="about-detail__skill-level">70%</span>
-                   </div>
-                   <div class="about-detail__skill-meter">
-                     <div class="about-detail__skill-progress" style="width: 70%"></div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </section>
-
-        <section class="about-detail__section">
-          <h2 class="about-detail__section-title">My Design Philosophy</h2>
-          <div class="about-detail__philosophy">
-            <div class="about-detail__philosophy-item">
-              <h3>Empathy First</h3>
-              <p>
-                I believe understanding users is the foundation of great design. Every decision 
-                should be rooted in real user needs and behaviors, not assumptions.
-              </p>
-            </div>
-            
-            <div class="about-detail__philosophy-item">
-              <h3>Logic in Code</h3>
-              <p>
-                Clean, maintainable code is as important as beautiful design. I strive to create 
-                solutions that are both elegant and efficient.
-              </p>
-            </div>
-            
-            <div class="about-detail__philosophy-item">
-              <h3>Beauty in Details</h3>
-              <p>
-                The magic happens in the details. From micro-interactions to typography choices, 
-                every element contributes to the overall user experience.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="about-detail__section">
-          <h2 class="about-detail__section-title">Beyond the Screen</h2>
-          <p>
-            When I'm not designing or coding, you'll find me exploring new coffee shops, 
-            curating the perfect Spotify playlist, or experimenting with color palettes 
-            for my next creative project.
-          </p>
-          <div class="about-detail__interests">
-            <h3>Things I Love</h3>
-            <ul>
-              <li>☕ Hot coffee and good conversations</li>
-              <li>🎨 Color theory and design inspiration</li>
-              <li>🎵 Music that tells a story</li>
-              <li>📚 Books that make me think differently</li>
-              <li>🌱 Learning new skills and technologies</li>
-              <li>👥 Collaborating with creative teams</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="about-detail__section">
-          <div class="about-detail__cta">
-            <h2>Let's Connect</h2>
-            <p>
-              I'm always excited to collaborate on interesting projects and connect with 
-              fellow designers and developers. Whether you want to discuss a potential 
-              project, share ideas, or just say hello, I'd love to hear from you!
-            </p>
-            <div class="about-detail__cta-buttons">
-              <Button variant="primary" size="large" @click="scrollToContact">
-                Get in Touch
-              </Button>
-              <Button variant="ghost" size="large" @click="scrollToWorks">
-                View My Work
-              </Button>
-            </div>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -314,22 +108,15 @@ export default {
     text-align: center;
   }
   
-  &__back-btn {
-    @include button-reset;
-    @include body-text($font-size-base, $font-weight-medium);
-    color: $text-secondary;
-    margin-bottom: $spacing-xl;
-    transition: color $transition-normal;
-    
-    &:hover {
-      color: $primary-color;
-    }
-  }
-  
   &__title {
     @include heading-style($font-size-5xl, $font-weight-normal);
     color: $text-primary;
-    margin: 0;
+    margin: 24px 0 0 0;
+  }
+
+  .wip {
+    text-align: center;
+    padding: 50px 0;
   }
   
   &__content {

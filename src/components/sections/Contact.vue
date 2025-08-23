@@ -2,40 +2,19 @@
   <section id="contact" class="contact">
     <div class="contact__container">
       <div class="contact__header">
-        <h2 class="contact__title">Get In Touch</h2>
+        <h2 class="contact__title">Let's bring your idea to life!</h2>
         <p class="contact__subtitle">Let's discuss your next project or just say hello</p>
       </div>
       
       <div class="contact__content">
         <div class="contact__info">
           <div class="contact__info-item">
-            <div class="contact__info-icon">
               <i class="mdi mdi-map-marker"></i>
-            </div>
-            <div class="contact__info-content">
-              <h3 class="contact__info-title">Location</h3>
-              <p class="contact__info-text">Cebu, Philippines</p>
-            </div>
+              <p class="contact__info-text">Danao City, Cebu, Philippines</p>
           </div>
-          
           <div class="contact__info-item">
-            <div class="contact__info-icon">
               <i class="mdi mdi-email"></i>
-            </div>
-            <div class="contact__info-content">
-              <h3 class="contact__info-title">Email</h3>
               <p class="contact__info-text">aronghazeljoy@gmail.com</p>
-            </div>
-          </div>
-          
-          <div class="contact__info-item">
-            <div class="contact__info-icon">
-              <i class="mdi mdi-phone"></i>
-            </div>
-            <div class="contact__info-content">
-              <h3 class="contact__info-title">Phone</h3>
-              <p class="contact__info-text">+63 912 345 6789</p>
-            </div>
           </div>
         </div>
         
@@ -204,6 +183,11 @@ export default {
     @include heading-style($font-size-5xl, $font-weight-normal);
     margin-bottom: $spacing-md;
     color: $primary-color;
+
+    @media (max-width: $breakpoint-md) {
+      @include heading-style($font-size-3xl, $font-weight-normal);
+      color: $primary-color;
+    }
   }
   
   &__subtitle {
@@ -211,11 +195,15 @@ export default {
     @include text-variant('secondary');
     max-width: 600px;
     margin: 0 auto;
+
+    @media (max-width: $breakpoint-md) {
+      @include body-text($font-size-base, $font-weight-normal);
+    }
   }
   
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: $spacing-3xl;
     align-items: start;
     
@@ -226,56 +214,53 @@ export default {
   }
   
   &__info {
+    width: 100%;
     @include fade-in(0.8s);
     animation-delay: 0.2s;
     animation-fill-mode: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-sm) {
+      gap: 12px;
+    }
   }
   
   &__info-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: $spacing-md;
-    margin-bottom: $spacing-xl;
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
-  &__info-icon {
-    @include flex-center;
-    width: 50px;
-    height: 50px;
-    background-color: $primary-background;
-    border-radius: $border-radius-full;
-    color: $primary-color;
-    flex-shrink: 0;
-    
+
     i {
       font-size: 24px;
+      color: $primary-color;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+      }
     }
-  }
-  
-  &__info-content {
-    flex: 1;
-  }
-  
-  &__info-title {
-    @include subheading-style($font-size-lg, $font-weight-medium);
-    margin-bottom: $spacing-xs;
-    color: $text-primary;
   }
   
   &__info-text {
     @include body-text($font-size-base, $font-weight-normal);
     @include text-variant('secondary');
     margin: 0;
+
+    @media (max-width: $breakpoint-md) {
+      @include body-text($font-size-sm, $font-weight-normal);
+    }
   }
   
   &__form {
     @include fade-in(0.8s);
     animation-delay: 0.4s;
     animation-fill-mode: both;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
   }
   
   &__form-group {
@@ -283,10 +268,14 @@ export default {
   }
   
   &__form-label {
-    @include subheading-style($font-size-base, $font-weight-medium);
+    @include subheading-style($font-size-base, $font-weight-normal);
     display: block;
     margin-bottom: $spacing-xs;
     color: $text-primary;
+
+    @media (max-width: $breakpoint-md) {
+      @include body-text($font-size-sm, $font-weight-normal);
+    }
   }
   
   &__form-input,
@@ -317,6 +306,8 @@ export default {
   
   &__form-actions {
     margin-top: $spacing-xl;
+    display: flex;
+    justify-content: center;
   }
 }
 </style> 
