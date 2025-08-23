@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header
+    <FAB
       :active-section="activeSection"
       @section-change="handleSectionChange"
     />
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Header from '../Header.vue'
+import FAB from '../FAB.vue'
 import Hero from '../sections/Hero.vue'
 import About from '../sections/About.vue'
 import Works from '../sections/Works.vue'
@@ -25,7 +25,7 @@ import Footer from '../Footer.vue'
 export default {
   name: 'Home',
   components: {
-    Header,
+    FAB,
     Hero,
     About,
     Works,
@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      activeSection: 'hero'
+      activeSection: 'about'
     }
   },
   mounted() {
@@ -42,32 +42,24 @@ export default {
   },
   methods: {
     handleSectionChange(sectionId) {
-      this.activeSection = sectionId
       this.scrollToSection(sectionId)
     },
-    
+
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId)
       if (element) {
-        const headerHeight = 80
-        const elementPosition = element.offsetTop - headerHeight
-        
+        const elementPosition = element.offsetTop
         window.scrollTo({
           top: elementPosition,
           behavior: 'smooth'
         })
-        
-        this.activeSection = sectionId
       }
     },
-    
+
     setupScrollSpy() {
-      const sections = ['hero', 'about', 'works', 'contact']
-      const headerHeight = 80
-      
+      const sections = ['about', 'works', 'contact']
       const handleScroll = () => {
-        const scrollPosition = window.scrollY + headerHeight + 100
-        
+        const scrollPosition = window.scrollY + window.innerHeight / 3
         for (let i = sections.length - 1; i >= 0; i--) {
           const section = document.getElementById(sections[i])
           if (section && scrollPosition >= section.offsetTop) {
@@ -76,7 +68,6 @@ export default {
           }
         }
       }
-      
       window.addEventListener('scroll', handleScroll)
       this.$once('hook:beforeDestroy', () => {
         window.removeEventListener('scroll', handleScroll)
@@ -87,7 +78,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
-  padding-top: 40px; // Account for fixed header
-}
-</style> 
+  .main {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+</style>
