@@ -46,7 +46,7 @@
             <Button
               variant="ghost"
               :size="isMobile ? 'medium' : 'large'"
-              @click="scrollToContact"
+              @click="openAbout"
             >
               Know more about me
             </Button>
@@ -101,8 +101,8 @@ export default {
       this.$emit('scroll-to-section', 'works')
     },
 
-    scrollToContact() {
-      this.$emit('scroll-to-section', 'contact') // better than resetting hash
+    openAbout() {
+      window.location.hash = '#/about';
     },
   }
 }
