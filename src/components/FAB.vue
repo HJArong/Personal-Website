@@ -59,7 +59,7 @@
         box-shadow: 0 0 32px 0 rgba($primary-color, 0.3);
         z-index: 500;
 
-        @media (max-width: $breakpoint-sm) {
+        @media (max-width: $breakpoint-md) {
             top: unset;
             bottom: 16px;
             left: 50%;
@@ -75,7 +75,7 @@
             flex-direction: column;
             gap: 8px;
 
-            @media (max-width: $breakpoint-sm) {
+            @media (max-width: $breakpoint-md) {
                 flex-direction: row;
             }
 

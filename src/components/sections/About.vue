@@ -4,8 +4,20 @@
       <div class="about__content">
         <!-- Left Section - Heading -->
         <div class="about__heading">
+          <div class="image-container">
+            <img
+              src="../../images/haze-portrait.svg"
+              alt="Hazel Arong Portrait"
+              class="portrait"
+            />
+            <img
+              src="../../images/figma-cursor.svg"
+              alt="Hazel Arong Portrait"
+              class="cursor"
+            />
+          </div>
           <h2 class="about__title">
-            Hi, I'm <span class="about__name">Haze</span>
+            Hi, I'm <span class="about__name">Haze.</span>
           </h2>
         </div>
         
@@ -13,7 +25,7 @@
         <div class="about__body">
           <div class="about__description">
             <p>
-              With a bachelor's degree in Computer Science, I design and build digital experiences 
+              I design and build digital experiences 
               that feel calm, clear, and human. I value empathy in design, logic in code, and 
               beauty in the details. I thrive in Agile teams using Scrum, where I get to collaborate 
               early, iterate often, and push for user-centered outcomes.
@@ -30,6 +42,9 @@
             <Button variant="ghost" size="large" @click="scrollToContact">
               Know more about me
             </Button>
+            <Button variant="ghost" size="large">
+              My CV
+            </Button>
           </div>
         </div>
       </div>
@@ -39,23 +54,27 @@
 
 <script>
 import Button from '../_generics/Button.vue'
+import Portrait from '../../images/haze-portrait.svg'
 
 export default {
   name: 'About',
-  components: {
-    Button
+  components: { Button },
+  data() {
+    return {
+      portrait: Portrait
+    }
   },
   methods: {
     scrollToWorks() {
       this.$emit('scroll-to-section', 'works')
     },
     scrollToContact() {
-      // Use window.location for reliable navigation
-      window.location.hash = '#/about'
-    }
+      this.$emit('scroll-to-section', 'contact') // better than resetting hash
+    },
   }
 }
 </script>
+
 
 <style lang="scss" scoped>
 @import '../../assets/styles/variables.scss';
@@ -64,18 +83,21 @@ export default {
 .about {
   @include section-padding;
   padding-top: calc($spacing-3xl + 80px); // Account for fixed header
-  background-color: #fafafa;
+  background-color: $white;
+  background: radial-gradient(circle at 50% 30%, #fff 0%, #FFE5EF 100%);
   
   &__container {
     @include container;
   }
   
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     gap: $spacing-4xl;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     
     @media (max-width: $breakpoint-lg) {
@@ -87,7 +109,41 @@ export default {
   
   // Left Section - Heading
   &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
     @include slide-up;
+
+    .image-container {
+      position: relative;
+
+      .portrait {
+        @media (max-width: $breakpoint-lg) {
+          width: 300px;
+        }
+
+        @media (max-width: $breakpoint-md) {
+          width: 250px;
+        }
+      }
+
+      .cursor {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        width: 200px;
+
+        @media (max-width: $breakpoint-lg) {
+          width: 180px;
+          top:  90%;
+          left: 12%;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          width: 160px;
+        }
+      }
+    }
   }
   
   &__title {
@@ -135,12 +191,9 @@ export default {
   
   &__cta {
     display: flex;
+    justify-content: center;;
     gap: $spacing-md;
     flex-wrap: wrap;
-    
-    @media (max-width: $breakpoint-lg) {
-      justify-content: center;
-    }
     
     @media (max-width: $breakpoint-sm) {
       flex-direction: column;

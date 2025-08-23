@@ -30,7 +30,7 @@ export default {
 
 .hero {
   display: flex;
-  align-item: center;
+  align-items: center;
   padding: 24px;
 
   &-container {
