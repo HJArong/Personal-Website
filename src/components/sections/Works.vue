@@ -39,9 +39,14 @@
           </div>
           
           <div class="works__project-content">
-            <h3 class="works__project-title">{{ project.title }}</h3>
-            <p class="works__project-description">{{ project.description }}</p>
-            
+            <div class="works__project-info">
+              <h3 class="works__project-title">
+                {{ project.title }}
+              </h3>
+              <p class="works__project-description">
+                {{ project.description }}
+              </p>
+            </div>
             <div class="works__project-tags">
               <span
                 v-for="tag in project.tags"
@@ -53,11 +58,8 @@
             </div>
             
             <div class="works__project-actions">
-              <Button variant="secondary" size="small" @click="viewProject(project)">
+              <Button variant="primary" size="medium" @click="viewDetails(project)">
                 View Project
-              </Button>
-              <Button variant="ghost" size="small" @click="viewDetails(project)">
-                Details
               </Button>
             </div>
           </div>
@@ -92,52 +94,52 @@ export default {
       projects: [
         {
           id: 1,
-          title: 'E-Commerce Platform',
-          description: 'A modern e-commerce solution with advanced features including user authentication, payment processing, and inventory management.',
-          tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+          title: 'Personal Portfolio',
+          description: 'My personal website to showcase my work as a UX Engineer.',
+          tags: ['Vuejs', 'HTML', 'CSS', 'Figma'],
           image: '/project1.jpg',
           url: '#'
         },
         {
           id: 2,
-          title: 'Mobile App Design',
-          description: 'A comprehensive mobile app design system with custom components, animations, and user experience optimization.',
-          tags: ['Figma', 'Adobe XD', 'Prototyping', 'UI/UX'],
+          title: 'Eventually',
+          description: 'An all-in-one event planning platform designed to make organizing parties effortless',
+          tags: ['Figma', 'Moqups', 'Wireframing', 'UI/UX'],
           image: '/project2.jpg',
           url: '#'
         },
         {
           id: 3,
-          title: 'Portfolio Website',
+          title: 'Scalema',
           description: 'A responsive portfolio website built with modern web technologies and optimized for performance and accessibility.',
           tags: ['Vue.js', 'SCSS', 'Vite', 'Responsive'],
           image: '/project3.jpg',
           url: '#'
         },
-        {
-          id: 4,
-          title: 'Data Visualization Dashboard',
-          description: 'An interactive dashboard for data visualization with real-time updates and customizable charts and graphs.',
-          tags: ['D3.js', 'Vue.js', 'API', 'Charts'],
-          image: '/project4.jpg',
-          url: '#'
-        },
-        {
-          id: 5,
-          title: 'Brand Identity Design',
-          description: 'Complete brand identity design including logo, color palette, typography, and brand guidelines for a startup.',
-          tags: ['Logo Design', 'Branding', 'Typography', 'Guidelines'],
-          image: '/project5.jpg',
-          url: '#'
-        },
-        {
-          id: 6,
-          title: 'Web Application',
-          description: 'A full-stack web application with user management, real-time features, and modern architecture patterns.',
-          tags: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io'],
-          image: '/project6.jpg',
-          url: '#'
-        },
+        // {
+        //   id: 4,
+        //   title: 'Data Visualization Dashboard',
+        //   description: 'An interactive dashboard for data visualization with real-time updates and customizable charts and graphs.',
+        //   tags: ['D3.js', 'Vue.js', 'API', 'Charts'],
+        //   image: '/project4.jpg',
+        //   url: '#'
+        // },
+        // {
+        //   id: 5,
+        //   title: 'Brand Identity Design',
+        //   description: 'Complete brand identity design including logo, color palette, typography, and brand guidelines for a startup.',
+        //   tags: ['Logo Design', 'Branding', 'Typography', 'Guidelines'],
+        //   image: '/project5.jpg',
+        //   url: '#'
+        // },
+        // {
+        //   id: 6,
+        //   title: 'Web Application',
+        //   description: 'A full-stack web application with user management, real-time features, and modern architecture patterns.',
+        //   tags: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io'],
+        //   image: '/project6.jpg',
+        //   url: '#'
+        // },
       ],
       skills: [
         'UI Designing',
@@ -275,6 +277,8 @@ export default {
     }
     
     &__project {
+      display: flex;
+      flex-direction: column;
       background-color: $white;
       border-radius: $border-radius-lg;
       overflow: hidden;
@@ -307,7 +311,14 @@ export default {
     }
     
     &__project-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       padding: $spacing-xl;
+    }
+
+    &__project-info {
+      flex: 1;
     }
     
     &__project-title {
@@ -350,6 +361,10 @@ export default {
     &__project-actions {
       display: flex;
       gap: $spacing-sm;
+
+      button {
+        width: 100%;
+      }
     }
     
     &__cta {

@@ -53,6 +53,7 @@
             <Button
               variant="ghost"
               :size="isMobile ? 'medium' : 'large'" 
+              @click="openCV"
             >
               My CV
             </Button>
@@ -104,6 +105,12 @@ export default {
     openAbout() {
       window.location.hash = '#/about';
     },
+
+    openCV() {
+      // Place your PDF in the project's public/ folder (e.g. public/Hazel-Arong-CV.pdf)
+      // This will open the PDF in a new tab
+      window.open('/Hazel-Arong-CV.pdf', '_blank')
+    }
   }
 }
 </script>

@@ -13,25 +13,26 @@
         <div class="works-detail__metadata">
           <p>Date: {{ project.date }}</p>
           <p>Role: {{ project.role }}</p>
-          <p>Client: {{ project.client }}</p>
+          <p>Client/Type: {{ project.client }}</p>
+          <p>Tools & Stack: {{ project.tools }}</p>
         </div>
       </div>
 
       <div class="works-detail__content">
         <section class="works-detail__section">
           <h2>Overview</h2>
-          <p>{{ project.overview }}</p>
+          <div v-html="project.overview"></div>
           <div class="works-detail__image-placeholder">Image Placeholder</div>
         </section>
 
         <section class="works-detail__section">
-          <h2>Problem</h2>
-          <p>{{ project.problem }}</p>
+          <h2>Challenge</h2>
+          <div v-html="project.challenge"></div>
         </section>
 
         <section class="works-detail__section">
-          <h2>Solution</h2>
-          <p>{{ project.solution }}</p>
+          <h2>Process</h2>
+          <div v-html="project.process"></div>
           <div class="works-detail__image-grid">
             <div class="works-detail__image-placeholder">Image Here</div>
             <div class="works-detail__image-placeholder">Image Here</div>
@@ -40,7 +41,7 @@
 
         <section class="works-detail__section">
           <h2>Learnings</h2>
-          <p>{{ project.learnings }}</p>
+          <div v-html="project.learnings"></div>
         </section>
       </div>
     </div>
@@ -49,82 +50,17 @@
 
 <script>
 import Button from '../_generics/Button.vue'
+import projects from '../../data/projects.js'
 
 export default {
   name: 'WorksDetail',
   components: { 
     Button 
   },
-  data() {
-    return {
-      projects: {
-        1: {
-          title: 'E-Commerce Platform',
-          date: '2023',
-          role: 'UX Designer, Frontend Developer',
-          client: 'Tech Startup',
-          overview: 'A modern e-commerce solution with advanced features including user authentication, payment processing, and inventory management.',
-          problem: 'The client needed a scalable e-commerce platform that could handle high traffic, multiple payment methods, and complex inventory management.',
-          solution: 'Developed a full-stack solution using React for the frontend, Node.js for the backend, and MongoDB for data storage.',
-          learnings: 'Learned the importance of user testing in e-commerce and how to optimize for performance at scale.'
-        },
-        2: {
-          title: 'Mobile App Design',
-          date: '2023',
-          role: 'UX Designer',
-          client: 'Mobile App Company',
-          overview: 'A comprehensive mobile app design system with custom components, animations, and user experience optimization.',
-          problem: 'The existing app had poor user engagement due to confusing navigation and outdated design patterns.',
-          solution: 'Redesigned the entire user interface with modern design principles and implemented smooth animations.',
-          learnings: 'Discovered how micro-interactions can significantly improve user engagement.'
-        },
-        3: {
-          title: 'Portfolio Website',
-          date: '2023',
-          role: 'Frontend Developer',
-          client: 'Personal Project',
-          overview: 'A responsive portfolio website built with modern web technologies and optimized for performance and accessibility.',
-          problem: 'Needed a professional portfolio that showcases work effectively while being fast and accessible.',
-          solution: 'Built with Vue.js and SCSS, optimized for performance with Vite, and ensured accessibility compliance.',
-          learnings: 'Gained deeper understanding of Vue.js ecosystem and accessibility best practices.'
-        },
-        4: {
-          title: 'Data Visualization Dashboard',
-          date: '2023',
-          role: 'Frontend Developer',
-          client: 'Analytics Company',
-          overview: 'An interactive dashboard for data visualization with real-time updates and customizable charts.',
-          problem: 'The client needed a way to display complex data in an easily digestible format for non-technical users.',
-          solution: 'Created an interactive dashboard using D3.js for data visualization and Vue.js for the interface.',
-          learnings: 'Learned advanced D3.js techniques and how to make complex data accessible.'
-        },
-        5: {
-          title: 'Brand Identity Design',
-          date: '2023',
-          role: 'Brand Designer',
-          client: 'Startup Company',
-          overview: 'Complete brand identity design including logo, color palette, typography, and brand guidelines.',
-          problem: 'A new startup needed a complete brand identity that would help them stand out in a competitive market.',
-          solution: 'Developed a comprehensive brand identity including logo design, color palette, and typography system.',
-          learnings: 'Understood the importance of brand consistency and how visual identity impacts customer perception.'
-        },
-        6: {
-          title: 'Web Application',
-          date: '2023',
-          role: 'Full Stack Developer',
-          client: 'Enterprise Client',
-          overview: 'A full-stack web application with user management, real-time features, and modern architecture patterns.',
-          problem: 'The client needed a scalable web application that could handle multiple users and real-time collaboration.',
-          solution: 'Built a Vue.js frontend with Express backend, PostgreSQL database, and Socket.io for real-time features.',
-          learnings: 'Gained experience with real-time web technologies and building scalable applications.'
-        }
-      }
-    }
-  },
   computed: {
     project() {
       const projectId = parseInt(this.$route.params.id)
-      return this.projects[projectId] || this.projects[1]
+      return projects[projectId] || projects[1]
     }
   },
   methods: {
@@ -204,6 +140,33 @@ export default {
       color: $text-primary;
       line-height: 1.6;
       margin-bottom: $spacing-xl;
+    }
+
+    :deep(.level-one) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: $spacing-md 0 $spacing-xl $spacing-xl;
+      padding-left: $spacing-xl;
+      list-style-position: outside;
+
+      li {
+        @include body-text($font-size-base, $font-weight-normal);
+        color: $text-primary;
+        line-height: 1.6;
+        margin: $spacing-sm 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      // nested lists (like a, b, c)
+      ul, ol {
+        margin-top: $spacing-xs;
+        margin-bottom: $spacing-xs;
+        padding-left: $spacing-lg;
+      }
     }
   }
   

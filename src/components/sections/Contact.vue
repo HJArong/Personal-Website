@@ -2,8 +2,8 @@
   <section id="contact" class="contact">
     <div class="contact__container">
       <div class="contact__header">
-        <h2 class="contact__title">Let's bring your idea to life!</h2>
-        <p class="contact__subtitle">Let's discuss your next project or just say hello</p>
+        <h2 class="contact__title">Let's work together!</h2>
+        <p class="contact__subtitle">We can discuss your next project or just say hello</p>
       </div>
       
       <div class="contact__content">
@@ -182,11 +182,9 @@ export default {
   &__title {
     @include heading-style($font-size-5xl, $font-weight-normal);
     margin-bottom: $spacing-md;
-    color: $primary-color;
 
     @media (max-width: $breakpoint-md) {
       @include heading-style($font-size-3xl, $font-weight-normal);
-      color: $primary-color;
     }
   }
   
