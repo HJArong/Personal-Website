@@ -33,7 +33,10 @@
           :class="`works__project--${index % 3 + 1}`"
         >
           <div class="works__project-image">
-            <div class="works__project-placeholder">
+            <div v-if="project.image">
+              <img :src="project.image">
+            </div>
+            <div v-else class="works__project-placeholder">
               <span class="works__project-number">{{ String(index + 1).padStart(2, '0') }}</span>
             </div>
           </div>
@@ -97,49 +100,25 @@ export default {
           title: 'Personal Portfolio',
           description: 'My personal website to showcase my work as a UX Engineer.',
           tags: ['Vuejs', 'HTML', 'CSS', 'Figma'],
-          image: '/project1.jpg',
+          image: 'src/images/project-covers/personal-website-cover.png',
           url: '#'
         },
         {
           id: 2,
           title: 'Eventually',
-          description: 'An all-in-one event planning platform designed to make organizing parties effortless',
+          description: 'An all-in-one event planning platform designed to make organizing parties effortless.',
           tags: ['Figma', 'Moqups', 'Wireframing', 'UI/UX'],
-          image: '/project2.jpg',
+          image: 'src/images/project-covers/eventually-cover.png',
           url: '#'
         },
         {
           id: 3,
           title: 'Scalema',
-          description: 'A responsive portfolio website built with modern web technologies and optimized for performance and accessibility.',
-          tags: ['Vue.js', 'SCSS', 'Vite', 'Responsive'],
-          image: '/project3.jpg',
+            description: 'A Web3 crowdfunding platform for investing in development projects in exchange for shares.',
+          tags: ['Vue.js', 'Web3', 'Figma'],
+          image: 'src/images/project-covers/scalema-cover.png',
           url: '#'
         },
-        // {
-        //   id: 4,
-        //   title: 'Data Visualization Dashboard',
-        //   description: 'An interactive dashboard for data visualization with real-time updates and customizable charts and graphs.',
-        //   tags: ['D3.js', 'Vue.js', 'API', 'Charts'],
-        //   image: '/project4.jpg',
-        //   url: '#'
-        // },
-        // {
-        //   id: 5,
-        //   title: 'Brand Identity Design',
-        //   description: 'Complete brand identity design including logo, color palette, typography, and brand guidelines for a startup.',
-        //   tags: ['Logo Design', 'Branding', 'Typography', 'Guidelines'],
-        //   image: '/project5.jpg',
-        //   url: '#'
-        // },
-        // {
-        //   id: 6,
-        //   title: 'Web Application',
-        //   description: 'A full-stack web application with user management, real-time features, and modern architecture patterns.',
-        //   tags: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io'],
-        //   image: '/project6.jpg',
-        //   url: '#'
-        // },
       ],
       skills: [
         'UI Designing',
@@ -294,6 +273,11 @@ export default {
     &__project-image {
       height: 200px;
       overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
     
     &__project-placeholder {

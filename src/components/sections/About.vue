@@ -6,15 +6,15 @@
         <div class="about__heading">
           <div class="image-container">
             <img
-              src="../../images/haze-portrait.png"
+              src="../../images/haze-portrait-1.png"
               alt="Hazel Arong Portrait"
               class="portrait"
             />
-            <img
+            <!-- <img
               src="../../images/figma-cursor.svg"
               alt="Hazel Arong Portrait"
               class="cursor"
-            />
+            /> -->
           </div>
           <h2 class="about__title">
             Hi, I'm <span class="about__name">Haze.</span>
