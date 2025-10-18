@@ -100,7 +100,7 @@ export default {
           title: 'Personal Portfolio',
           description: 'My personal website to showcase my work as a UX Engineer.',
           tags: ['Vuejs', 'HTML', 'CSS', 'Figma'],
-          image: 'src/images/project-covers/personal-website-cover.png',
+          image: '/images/project-covers/personal-website-cover.png',
           url: '#'
         },
         {
@@ -108,7 +108,7 @@ export default {
           title: 'Eventually',
           description: 'An all-in-one event planning platform designed to make organizing parties effortless.',
           tags: ['Figma', 'Moqups', 'Wireframing', 'UI/UX'],
-          image: 'src/images/project-covers/eventually-cover.png',
+          image: '/images/project-covers/eventually-cover.png',
           url: '#'
         },
         {
@@ -116,7 +116,7 @@ export default {
           title: 'Scalema',
             description: 'A Web3 crowdfunding platform for investing in development projects in exchange for shares.',
           tags: ['Vue.js', 'Web3', 'Figma'],
-          image: 'src/images/project-covers/scalema-cover.png',
+          image: '/images/project-covers/scalema-cover.png',
           url: '#'
         },
       ],
