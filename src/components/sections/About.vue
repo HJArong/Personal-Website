@@ -55,8 +55,8 @@
             </Button>
             <Button
               variant="ghost"
-              :size="isMobile ? 'medium' : 'large'" 
-              @click="openCV"
+              :size="isMobile ? 'medium' : 'large'"
+              disabled
             >
               My CV
             </Button>
