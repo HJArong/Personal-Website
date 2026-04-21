@@ -14,8 +14,8 @@ export default {
 @import './assets/styles/variables.scss';
 @import './assets/styles/mixins.scss';
 
-// Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+// Import Google Fonts - Lora (readable serif) + Inter (clean sans-serif)
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;

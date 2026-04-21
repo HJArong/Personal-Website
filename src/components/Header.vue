@@ -42,7 +42,7 @@ export default {
   props: {
     activeSection: {
       type: String,
-      default: 'about'
+      default: 'hero'
     }
   },
   data() {
@@ -52,6 +52,7 @@ export default {
         { id: 'hero', name: 'Home' },
         { id: 'about', name: 'About' },
         { id: 'works', name: 'Works' },
+        { id: 'blog', name: 'Blog' },
         { id: 'contact', name: 'Contact' }
       ]
     }
@@ -92,11 +93,11 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid rgba(252, 68, 135, 0.08);
+  box-shadow: 0 10px 30px rgba(252, 68, 135, 0.06);
   z-index: 1000;
   transition: all $transition-normal;
   

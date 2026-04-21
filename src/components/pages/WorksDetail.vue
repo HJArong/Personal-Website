@@ -9,6 +9,9 @@
       </div>
 
       <div class="works-detail__header">
+        <div class="works-detail__image-placeholder">
+          <img :src="project.cover" :alt="`${project.title} cover`" />
+        </div>
         <h1 class="works-detail__title">{{ project.title }}</h1>
         <div class="works-detail__metadata">
           <p>Date: {{ project.date }}</p>
@@ -22,7 +25,6 @@
         <section class="works-detail__section">
           <h2>Overview</h2>
           <div v-html="project.overview"></div>
-          <div class="works-detail__image-placeholder">Image Placeholder</div>
         </section>
 
         <section class="works-detail__section">
@@ -83,7 +85,9 @@ export default {
 
 .works-detail {
   min-height: 100vh;
-  background-color: $white;
+  background:
+    radial-gradient(circle at top right, rgba(252, 68, 135, 0.1), transparent 28%),
+    linear-gradient(180deg, #fff8fb 0%, #ffffff 100%);
   padding: $spacing-2xl 0;
   
   &__container {
@@ -102,6 +106,11 @@ export default {
   
   &__header {
     margin-bottom: $spacing-3xl;
+    padding: $spacing-xl;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(252, 68, 135, 0.14);
+    box-shadow: 0 20px 50px rgba(252, 68, 135, 0.08);
   }
   
   &__title {
@@ -129,6 +138,11 @@ export default {
   }
   
   &__section {
+    padding: $spacing-xl;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(252, 68, 135, 0.1);
+
     h2 {
       @include heading-style($font-size-2xl, $font-weight-medium);
       color: $primary-color;
@@ -175,11 +189,14 @@ export default {
     align-items: center;
     justify-content: center;
     min-height: 200px;
-    border: 2px dashed $gray-medium;
     border-radius: $border-radius-md;
-    background-color: $gray-light;
-    color: $text-secondary;
-    @include body-text($font-size-sm, $font-weight-normal);
+    margin-bottom: 32px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
   
   &__image-grid {

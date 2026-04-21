@@ -25,13 +25,16 @@
         <div class="about__body">
           <div class="about__description">
             <p>
-              I design and build digital experiences 
-              that feel calm, clear, and human. I value empathy in design, logic in code, and 
-              beauty in the details. I thrive in Agile teams using Scrum, where I get to collaborate 
+              I design and build digital experiences that feel calm, clear, and human. I care
+              deeply about empathy in design, logic in code, and beauty in the details.
+            </p>
+            <p>
+              I thrive in Agile teams using Scrum, where I get to collaborate
               early, iterate often, and push for user-centered outcomes.
             </p>
             <p>
-              Also: fueled by hot coffee, color palettes, and well-curated Spotify playlist.
+              Also fueled by hot coffee, curated color palettes, and a well-made Spotify
+              playlist.
             </p>
           </div>
           
@@ -41,14 +44,14 @@
               :size="isMobile ? 'medium' : 'large'" 
               @click="scrollToWorks"
             >
-              View my works
+              View my work
             </Button>
             <Button
               variant="ghost"
               :size="isMobile ? 'medium' : 'large'"
               @click="openAbout"
             >
-              Know more about me
+              Learn more about me
             </Button>
             <Button
               variant="ghost"
@@ -122,9 +125,8 @@ export default {
 
 .about {
   @include section-padding;
-  // padding-top: calc($spacing-3xl + 80px); // Account for fixed header
-  background-color: $white;
-  background: radial-gradient(circle at 50% 30%, #fff 0%, #FFE5EF 100%);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(252, 68, 135, 0.12) 0%, rgba(255, 229, 239, 0.7) 34%, #fff 100%);
   
   &__container {
     @include container;
@@ -139,6 +141,7 @@ export default {
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    padding: $spacing-xl 0;
     
     @media (max-width: $breakpoint-lg) {
       grid-template-columns: 1fr;
@@ -237,6 +240,17 @@ export default {
     @include fade-in(0.8s);
     animation-delay: 0.2s;
     animation-fill-mode: both;
+    max-width: 760px;
+    padding: $spacing-2xl;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(252, 68, 135, 0.16);
+    box-shadow: 0 20px 50px rgba(252, 68, 135, 0.08);
+    backdrop-filter: blur(10px);
+
+    @media (max-width: $breakpoint-sm) {
+      padding: $spacing-lg;
+    }
   }
   
   &__description {

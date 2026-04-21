@@ -18,12 +18,12 @@
         >
           <p class="body-text">
             I design with empathy and build with precision, turning ideas into interfaces that
-            feel as good as they look. I’m on a never‑ending quest to make my works little more
+            feel as good as they look. I&apos;m on a never-ending quest to make my work a little more
             beautiful, a lot more usable, and sprinkled with just the right amount of
             “<span class="primary-color">ooh, that’s pretty ✨</span>”
           </p>
           <p class="body-text">
-            My sweet spot is where clean code meets human‑centered design which makes products
+            My sweet spot is where clean code meets human-centered design, creating products that are
             not just usable, but enjoyable.
           </p>
           <div class="group">
@@ -46,13 +46,13 @@
           color="accent"
         >
           <p class="body-text">
-            I am a UX Engineer. I am at the crossroad of design and development. I
-            specialize in crafting smooth and intuitive digital experiences by blending
-            design thinking and front end engineering.
+            I am a UX Engineer working at the crossroads of design and development. I
+            specialize in crafting smooth, intuitive digital experiences by blending
+            design thinking with frontend engineering.
           </p>
           <div class="group">
             <p class="body-text">
-              My design and UX skills and expertise include:
+              My design and UX skills include:
             </p>
             <div class="hobbies-grid">
               <div
@@ -66,7 +66,7 @@
           </div>
           <div class="group">
             <p class="body-text">
-              My front end development skills and expertise include:
+              My frontend development skills include:
             </p>
             <div class="hobbies-grid">
               <div
@@ -80,7 +80,7 @@
           </div>
           <div class="group">
             <p class="body-text">
-              My collabortion and product thinking skills and expertise include:
+              My collaboration and product thinking skills include:
             </p>
             <div class="hobbies-grid">
               <div
@@ -102,8 +102,8 @@
               2018 - 2022: Laying the foundation
             </p>
             <p class="body-text">
-              Studied Computer Science in the University of the Philippines, mainly exploring
-              algorithms and theories. On my final year, I worked as a part-time front end
+              I studied Computer Science at the University of the Philippines, where I mainly explored
+              algorithms and theory. In my final year, I worked as a part-time frontend
               developer but discovered a fascination for how people interact with technology,
               which sparked a shift from pure code to crafting intuitive user experiences.
             </p>
@@ -113,11 +113,11 @@
               2021 - Present: Bridging worlds
             </p>
             <p class="body-text">
-              I stepped into the role of UX Engineer & Team Lead, blending design sensibility with
-              engineering precision. Led cross‑functional temas where designers, developers, and
-              stakeholders worked in sync to ship products that not only function but feel right. I
-              developed, leadership skills in facilitation, mentoring, and product decision‑making.
-              I’ve started delving into AI-driven design, focusing on how we can design for AI systems,
+              I stepped into the role of UX Engineer and Team Lead, blending design sensibility with
+              engineering precision. I led cross-functional teams where designers, developers, and
+              stakeholders worked in sync to ship products that not only functioned well, but also felt right.
+              Along the way, I developed leadership skills in facilitation, mentoring, and product decision-making.
+              I&apos;ve also started delving into AI-driven design, focusing on how we can design for AI systems,
               design with AI as a collaborator, and design experiences shaped by AI. 
             </p>
           </div>
@@ -126,10 +126,10 @@
               Now: Designing with intent
             </p>
             <p class="body-text">
-              I enjoy creating calm, human‑centered digital experiences that balance beauty,
-              accessibility, and performance. I’m delving into Web3 design by exploring how to simplify complex
-              blockchain concepts and create intuitive, human-centered experiences in decentralized platforms.
-              I'm Championing a “pink energy” ethos by delivering work that’s empathetic, uplifting, and quietly
+              I enjoy creating calm, human-centered digital experiences that balance beauty,
+              accessibility, and performance. I&apos;m also exploring Web3 design, focusing on how to simplify complex
+              blockchain concepts and create intuitive, human-centered experiences for decentralized platforms.
+              I&apos;m championing a “pink energy” ethos by delivering work that feels empathetic, uplifting, and quietly
               powerful.
             </p>
           </div>
@@ -151,9 +151,9 @@
         <div class="about-detail__cta">
           <h2>Let's Connect</h2>
           <p class="body-text">
-            I'm always excited to collaborate on interesting projects and connect with 
+            I&apos;m always excited to collaborate on interesting projects and connect with 
             fellow designers and developers. Whether you want to discuss a potential 
-            project, share ideas, or just say hello, I'd love to hear from you!
+            project, share ideas, or simply say hello, I&apos;d love to hear from you.
           </p>
           <div class="about-detail__cta-buttons">
             <Button
@@ -212,7 +212,7 @@ export default {
       devItem: [
         'HTML',
         'CSS',
-        'Javascript',
+        'JavaScript',
         'Vue.js',
         'Python',
         'Git & Version Control',
@@ -220,7 +220,7 @@ export default {
       ],
       collabItem: [
         'Agile/Scrum',
-        'Cross-functional Communication',
+        'Cross-Functional Communication',
         'Product Mindset',
         'Storytelling',
       ],

@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__content">
-        <p class="footer__text">© 2025 Hazel Arong. All rights reserved.</p>
+        <p class="footer__text">© 2026 Hazel Arong. Designed and built with intention.</p>
         
         <div class="footer__social">
           <a
@@ -54,8 +54,8 @@ export default {
 @import '../assets/styles/mixins.scss';
 
 .footer {
-  background-color: $gray-light;
-  border-top: 1px solid $gray-medium;
+  background: linear-gradient(180deg, #fff8fb 0%, #fff 100%);
+  border-top: 1px solid rgba(252, 68, 135, 0.1);
   padding: $spacing-xl 0;
   margin-top: auto;
   

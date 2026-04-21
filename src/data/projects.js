@@ -1,61 +1,60 @@
 export default {
   "1": {
     title: "Personal Website",
+    cover: "/images/project-covers/personal-website-cover.png",
     date: "2025",
     role: "UX Engineer",
     client: "Personal Project",
     tools: "Vue.js, Figma, Netlify",
-    overview: `<p>I designed and developed my personal website to showcase my work as a UX Engineer. The site’s purpose is to highlight my career milestones,
-                case studies, design process, and leadership skills, while reflecting on my personal brand, which is minimal, professional, and user-centered.</p>`,
-    challenge: `<p>As a designer, my portfolio is often the first impression recruiters and clients have of me therefore, I needed a website that would communicate
-                    my design approach and principles, be seamless and intuitive to navigate, and balance personal branding, aesthetic polish, and professionalism </p>`,
+    overview: `<p>I designed and developed my personal website to showcase my work as a UX Engineer. The site highlights career milestones, case studies, design process, and leadership experience while reflecting a brand that feels minimal, professional, and user-centered.</p>`,
+    challenge: `<p>My portfolio is often the first impression recruiters and clients have of me, so I needed a website that clearly communicated my design principles, felt seamless to navigate, and balanced personality with professionalism.</p>`,
     process: `<ol class='level-one'>
                 <li class='level-two'>
-                    Research and benchmarking 
+                    Research and benchmarking
                     <ol style="list-style-type: lower-alpha;">
-                        <li>I checked out websites to look for inspiration</li>
-                        <li>I listed websites that share similar goals to my site</li>
-                        <li>I studied portfolios of top designers for patterns that emphasize clear storytelling, strong case studies, and personal branding </li>
+                        <li>Reviewed portfolio websites for inspiration and reference points</li>
+                        <li>Listed sites with goals similar to my own portfolio</li>
+                        <li>Studied top designers' portfolios for patterns in storytelling, case studies, and personal branding</li>
                         <li>I identified frustrations such as cluttered UI, overwhelming animations, and confusing navigation</li>
                     </ol>
                 </li>
                 <li class='level-two'>
                     Information Architecture
                     <ol style="list-style-type: lower-alpha;">
-                        <li>Defined 3 key sections for the minimum viable product (MVP): About Me, Works, and Contact. </li>
-                        <li>Added a Hero </li>
+                        <li>Defined three key sections for the minimum viable product (MVP): About, Work, and Contact</li>
+                        <li>Introduced a hero section to establish context and personality immediately</li>
                     </ol>
                 </li>
                 <li>
                     Wireframing and UI Design
                     <ol style="list-style-type: lower-alpha;">
-                        <li>For low-fidelity sketches, I used Moqups </li>
-                        <li>For high-fidelity sketches, I used Figma </li>
-                        <li>Focused on structured and responsive layouts, generous white space, and readable but somehow reflective of my personality typography. </li>
+                        <li>Created low-fidelity sketches in Moqups</li>
+                        <li>Developed high-fidelity designs in Figma</li>
+                        <li>Focused on structured, responsive layouts, generous white space, and typography that feels readable while still reflecting my personality</li>
                     </ol>
                 </li>
                 <li>
                     Development
                     <ol style="list-style-type: lower-alpha;">
-                        <li>Built with Vue + Javascript for fast, scalable frontend</li>
+                        <li>Built with Vue and JavaScript for a fast, scalable frontend</li>
                         <li>Added minimal and unobtrusive animations</li>
-                        <li>Optimized for mobile-first responsiveness </li>
+                        <li>Optimized for mobile-first responsiveness</li>
                     </ol>
                 </li>
                 <li>
                     Solution
                     <ol style="list-style-type: lower-alpha;">
-                        <li> A minimalist, grid-based layout that highlights contents per section without distraction. </li>
-                        <li>Sticky navigation bar for quick access across sections </li>
-                        <li>Microinteractions on hover states, smooth scrolling, and transitions </li>
-                        <li>Optimized performance </li>
+                        <li>A minimalist, grid-based layout that highlights each section without distraction</li>
+                        <li>A sticky navigation bar for quick access across sections</li>
+                        <li>Micro-interactions, smooth scrolling, and subtle transitions</li>
+                        <li>Performance-minded implementation</li>
                     </ol>
                 </li>
                 <li>
                     The Impact
                     <ol style="list-style-type: lower-alpha;">
-                        <li>Ease for visitors to understand my role and expertise at a glance </li>
-                        <li>Clear entry points </li>
+                        <li>Made it easier for visitors to understand my role and expertise at a glance</li>
+                        <li>Created clear entry points into my work and story</li>
                     </ol>
                 </li>
                 <li>
@@ -64,26 +63,27 @@ export default {
                         <li>
                             What worked well:
                             <ol style="list-style-type: lower-roman;">
-                                <li>Simple and accessible structure made the site intuitive and seamless to navigate</li>
-                                <li>Subtle animations enhance, rather than distract the users from the content </li>
+                                <li>A simple, accessible structure made the site intuitive and seamless to navigate</li>
+                                <li>Subtle animations enhanced the experience without distracting from the content</li>
                             </ol>
                         </li>
                         <li>
                             What I would improve
                             <ol style="list-style-type: lower-roman;">
-                                <li>Expore accessibility enhancements liike dark/light mode toggling </li>
-                                <li>Add testimonies or recommendations from people I worked with </li>
+                                <li>Explore accessibility enhancements such as dark and light mode support</li>
+                                <li>Add testimonials or recommendations from people I have worked with</li>
                             </ol>
                         </li>
                     </ol>
                 </li>
             </ol>`,
-    learnings: `<p>This project reinforced my belief that a portfolio isn't just a gallery - it's a product in itself. Treating
-            it as a UX challenge helped me balance clarity, personality, and scalability, ensuring it grows with my career.</p>`
+    gallery: "[]",
+    learnings: `<p>This project reinforced my belief that a portfolio is not just a gallery, but a product in itself. Treating it as a UX challenge helped me balance clarity, personality, and scalability so the site can grow alongside my career.</p>`
   },
 
     "2": {
     title: "Eventually",
+    cover: "/images/project-covers/eventually-cover.png",
     date: "2025",
     role: "UX Engineer",
     client: "Personal Project (Ongoing)",
@@ -91,9 +91,7 @@ export default {
     overview: `<p>Eventually is an all-in-one event planning platform designed to make organizing parties effortless. It connects
                 users with vendors such as caterers, photographers, florists, and venues—all in one place. The app also features
                 pre-made event packages and a social feed where vendors can showcase their products and services.</p>`,
-    challenge: `<p>Based on personal experience, event planning usually involves multiple tools, long chats, and fragmented coordination across different platforms.
-                The challenge is to design a unified, intuitive experience that simplifies vendor discovery, booking, and communication—while
-                keeping it fun, social, and easy to use even for first-time planners.</p>`,
+    challenge: `<p>From personal experience, event planning often involves multiple tools, long message threads, and fragmented coordination across platforms. The challenge was to design a unified, intuitive experience that simplifies vendor discovery, booking, and communication while still feeling fun, social, and approachable for first-time planners.</p>`,
     process: `<ol class='level-one'>
                 <li class='level-two'>
                     Research and Benchmarking
@@ -115,7 +113,7 @@ export default {
                     Wireframing and Early UI Design
                     <ol style="list-style-type: lower-alpha;">
                         <li>Started low-fidelity sketches in Moqups to visualize navigation flow and feature placement.</li>
-                        <li>Focused on clarity and simplicity—prioritizing clean layouts, large touch areas, and step-by-step task flows.</li>
+                        <li>Focused on clarity and simplicity by prioritizing clean layouts, large touch areas, and step-by-step task flows.</li>
                         <li>Created early Figma wireframes for testing user journey clarity and layout hierarchy.</li>
                     </ol>
                 </li>
@@ -136,17 +134,19 @@ export default {
                     </ol>
                 </li>
                 </ol>`,
+    gallery: "[]",
     learnings: `<p>Working on Eventually reminded me how crucial it is to simplify complex systems early in the design process.
-                Even before development, clarity in user flows and information architecture helps prevent confusion later and sets a strong foundation
+                Even before development, clarity in user flows and information architecture helps prevent confusion later and creates a stronger foundation
                 for usability testing.</p>`
     },
 
     "3": {
     title: "Scalema",
+    cover: "/images/project-covers/scalema-cover.png",
     date: "2024",
     role: "UX Engineer",
     client: "Startup Project",
-    tools: "Figma, Vue.js,",
+    tools: "Figma, Vue.js",
     overview: `<p>Scalema is a decentralized crowdfunding platform that enables users to invest in development projects in exchange for project shares.
                 Inspired by Kickstarter, Scalema leverages blockchain technology to ensure transparent transactions and equitable profit distribution
                 between project creators and investors.</p>`,
@@ -167,7 +167,7 @@ export default {
                     <ol style="list-style-type: lower-alpha;">
                         <li>Outlined separate flows for creating a project, approving and reviewing project proposals, and investing in one.</li>
                         <li>Prioritized clarity and transparency in presenting project information and ROI breakdowns.</li>
-                        <li>Engineered the workflow of wallet connection, investing, and selling of shares.</li>
+                        <li>Mapped the workflow for wallet connection, investing, and selling shares.</li>
                     </ol>
                 </li>
                 <li>
@@ -196,8 +196,8 @@ export default {
                     The Impact
                     <ol style="list-style-type: lower-alpha;">
                         <li>Initial feedback from beta testers highlighted the platform’s ease of navigation and clarity in presenting project details.</li>
-                        <li>Stakeholders appreciated how transparent investment breakdowns and milestone tracking felt compared to traditional crowdfunding sites.</li>
-                        <li>Using pre-added data allowed us to simulate real user scenarios, helping us validate key flows like wallet connection, 
+                        <li>Stakeholders appreciated how transparent the investment breakdowns and milestone tracking felt compared to traditional crowdfunding sites.</li>
+                        <li>Using seeded data allowed us to simulate real user scenarios, helping us validate key flows like wallet connection, 
                         investment, and payout visualization.</li>
                     </ol>
                 </li>
@@ -221,7 +221,8 @@ export default {
                     </ol>
                 </li>
                 </ol>`,
-    learnings: `<p>Scalema taught me the importance of designing for trust—especially in emerging technologies like blockchain. By balancing technical accuracy with user empathy, I learned how to make complex systems approachable without sacrificing transparency or control.</p>`
+    gallery: "[]",
+    learnings: `<p>Scalema taught me the importance of designing for trust, especially in emerging technologies like blockchain. By balancing technical accuracy with user empathy, I learned how to make complex systems approachable without sacrificing transparency or control.</p>`
     }
 
 };

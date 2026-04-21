@@ -22,15 +22,17 @@
         props: {
             activeSection: {
                 type: String,
-                default: 'about'
+                default: 'hero'
             }
         },
 
         data() {
             return {
                 sections: [
+                    { id: 'hero', name: 'Home' },
                     { id: 'about', name: 'About' },
                     { id: 'works', name: 'Works' },
+                    { id: 'blog', name: 'Blog' },
                     { id: 'contact', name: 'Contact' }
                 ]
             };
@@ -50,13 +52,16 @@
 
     .fab {
         position: fixed;
-        background: $white;
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
         top: 40%;
         right: 2%;
-        width: 82px;
-        padding: 24px 0;
-        border-radius: 48px;
-        box-shadow: 0 0 32px 0 rgba($black, 0.15);
+        width: 96px;
+        padding: 20px 0;
+        border-radius: 999px;
+        border: 1px solid rgba(252, 68, 135, 0.15);
+        box-shadow: 0 20px 45px rgba($black, 0.12);
         z-index: 500;
 
         @media (max-width: $breakpoint-md) {
@@ -67,7 +72,7 @@
             transform: translateX(-50%);
             padding: 0 12px;
             border-radius: 24px;
-            border: 2px solid $primary-disabled;
+            border: 1px solid rgba(252, 68, 135, 0.2);
             box-shadow: 0 0 24px 0 rgba($black, 0.25);
             width: max-content;
         }
@@ -83,7 +88,7 @@
             }
 
             .section-button {
-                padding: 12px;
+                padding: 10px 12px;
                 text-align: center;
 
                 &:hover {
@@ -99,10 +104,11 @@
                 p {
                     font-size: 14px;
                     transition-duration: 0.2s;
+                    color: $text-secondary;
 
                     &.active {
                         font-size: 15px;
-                        font-weight: 500;
+                        font-weight: 600;
                         color: $primary-color;
                     }
                 }

@@ -1,11 +1,12 @@
 @import './variables.scss';
 
-// Typography Mixins
+// Typography Mixins (optimized for Lora + Inter)
 @mixin heading-style($size: $font-size-3xl, $weight: $font-weight-normal) {
   font-family: $font-heading;
   font-size: $size;
   font-weight: $weight;
-  line-height: 1.2;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
   color: $text-primary;
 }
 
@@ -13,7 +14,7 @@
   font-family: $font-body;
   font-size: $size;
   font-weight: $weight;
-  line-height: 1.2;
+  line-height: 1.35;
   color: $text-primary;
 }
 
@@ -21,7 +22,7 @@
   font-family: $font-body;
   font-size: $size;
   font-weight: $weight;
-  line-height: 1.2;
+  line-height: 1.35;
   color: $primary-color;
 }
 
@@ -29,7 +30,7 @@
   font-family: $font-body;
   font-size: $size;
   font-weight: $weight;
-  line-height: 1.6;
+  line-height: 1.7;
   color: $text-primary;
 }
 
@@ -136,12 +137,12 @@
 
 // Layout Mixins
 @mixin container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 $spacing-md;
+  padding: 0 $spacing-lg;
   
   @media (min-width: $breakpoint-md) {
-    padding: 0 $spacing-lg;
+    padding: 0 $spacing-xl;
   }
 }
 
@@ -149,7 +150,7 @@
   padding: $spacing-3xl 0;
   
   @media (min-width: $breakpoint-md) {
-    padding: $spacing-3xl * 1.5 0;
+    padding: $spacing-4xl 0;
   }
 }
 

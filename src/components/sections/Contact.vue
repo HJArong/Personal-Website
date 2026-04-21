@@ -2,8 +2,12 @@
   <section id="contact" class="contact">
     <div class="contact__container">
       <div class="contact__header">
-        <h2 class="contact__title">Let's work together!</h2>
-        <p class="contact__subtitle">We can discuss your next project or just say hello</p>
+        <p class="contact__eyebrow">Contact</p>
+        <h2 class="contact__title">Let&apos;s build something thoughtful together</h2>
+        <p class="contact__subtitle">
+          If you have a project, collaboration, or opportunity in mind, I&apos;d love to hear
+          from you.
+        </p>
       </div>
       
       <div class="contact__content">
@@ -168,6 +172,9 @@ export default {
 
 .contact {
   @include section-padding;
+  background:
+    radial-gradient(circle at bottom right, rgba(252, 68, 135, 0.12), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #fff8fb 100%);
   
   &__container {
     @include container;
@@ -177,6 +184,14 @@ export default {
     text-align: center;
     margin-bottom: $spacing-3xl;
     @include slide-up;
+  }
+
+  &__eyebrow {
+    @include subheading-style($font-size-sm, $font-weight-semibold);
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: $spacing-sm;
   }
   
   &__title {
@@ -259,6 +274,15 @@ export default {
     margin: auto;
     max-width: 600px;
     width: 100%;
+    padding: $spacing-2xl;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(252, 68, 135, 0.14);
+    box-shadow: 0 18px 45px rgba(252, 68, 135, 0.08);
+
+    @media (max-width: $breakpoint-sm) {
+      padding: $spacing-lg;
+    }
   }
   
   &__form-group {
