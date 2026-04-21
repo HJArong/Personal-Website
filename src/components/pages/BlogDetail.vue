@@ -30,16 +30,7 @@
           </div>
         </div>
 
-        <div class="blog-detail__content">
-          <section
-            v-for="section in post.sections"
-            :key="section.title"
-            class="blog-detail__section"
-          >
-            <h2>{{ section.title }}</h2>
-            <div v-html="section.body"></div>
-          </section>
-        </div>
+        <div class="blog-detail__content" v-html="post.content"></div>
       </article>
     </div>
   </div>
@@ -110,7 +101,7 @@ export default {
   }
 
   &__hero,
-  &__section {
+  &__content {
     padding: $spacing-xl;
     border-radius: 28px;
     background: rgba(255, 255, 255, 0.84);
@@ -170,16 +161,21 @@ export default {
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-xl;
-  }
-
-  &__section {
-    h2 {
+    :deep(h2) {
       @include heading-style($font-size-2xl, $font-weight-medium);
       color: $primary-color;
       margin-bottom: $spacing-lg;
+      margin-top: $spacing-2xl;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    :deep(h3) {
+      @include subheading-style($font-size-xl, $font-weight-semibold);
+      color: $text-primary;
+      margin: $spacing-xl 0 $spacing-md;
     }
 
     :deep(p) {
@@ -191,6 +187,22 @@ export default {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    :deep(ul),
+    :deep(ol) {
+      margin: 0 0 $spacing-lg 1.5rem;
+      color: $text-primary;
+
+      li {
+        @include body-text($font-size-base, $font-weight-normal);
+        line-height: 1.8;
+        margin-bottom: $spacing-sm;
+      }
+    }
+
+    :deep(a) {
+      color: $primary-color;
     }
   }
 }
