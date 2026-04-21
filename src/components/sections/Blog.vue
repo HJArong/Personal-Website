@@ -80,9 +80,7 @@ export default {
 
 .blog {
   @include section-padding;
-  background:
-    radial-gradient(circle at top left, rgba(252, 68, 135, 0.12), transparent 36%),
-    linear-gradient(180deg, #fff8fb 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
 
   &__container {
     @include container;
@@ -91,7 +89,8 @@ export default {
   &__header {
     text-align: center;
     max-width: 720px;
-    margin: 0 auto $spacing-3xl;
+    margin: 0 auto;
+    padding-bottom: $spacing-3xl;
   }
 
   &__eyebrow {
@@ -133,7 +132,7 @@ export default {
   &__card {
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
+    gap: $spacing-lg;
     padding: $spacing-xl;
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.85);
@@ -220,15 +219,15 @@ export default {
 
   &__tag {
     @include body-text($font-size-xs, $font-weight-medium);
-    padding: 0.5rem 0.85rem;
-    border-radius: $border-radius-full;
+    padding: 0.25rem 0.85rem;
+    border-radius: 20px;
     background: rgba(252, 68, 135, 0.06);
     color: $primary-color;
     border: 1px solid rgba(252, 68, 135, 0.12);
   }
 
   &__note {
-    margin-top: $spacing-2xl;
+    margin-top: $spacing-3xl;
     text-align: center;
 
     p {

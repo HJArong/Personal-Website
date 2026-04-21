@@ -34,35 +34,32 @@
 
     .content-section {
         @include flex-column;
-        gap: 12px;
-        padding: 24px;
+        gap: 16px;
+        padding: $spacing-2xl;
         width: 100%;
-        border-radius: 24px;
-        min-height: 200px;
-        box-shadow: 0 0 16px 0 rgba($gray-medium, 0.9);
-        margin-bottom: 24px;
+        border-radius: 28px;
+        min-height: 180px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+        margin-bottom: $spacing-xl;
 
-        &.accent {
-            background: $primary-background;
-            border: 3px solid $white;
-        }
-
-        &.white {
-            background: $white;
-            border: 3px solid $text-disabled;
+        &.accent, &.white {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         &__title {
             h2 {
                 @include subheading-style($font-size-xl, $font-weight-medium);
-                color: $primary-color;
-                margin-bottom: 12px;
+                color: $text-primary;
+                margin-bottom: $spacing-sm;
             }
         }
 
         &__details {
             @include flex-column;
-            gap: 16px;
+            gap: $spacing-lg;
         }
     }
 </style>

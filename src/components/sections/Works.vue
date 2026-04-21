@@ -186,29 +186,29 @@ export default {
 @import '../../assets/styles/mixins.scss';
 
 .works {
-  background: linear-gradient(180deg, #ffffff 0%, #fff5f8 20%, #fdf7fa 100%);
+  background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 50%, #f8f8f8 100%);
 
   .works__skills-carousel {
     overflow: hidden;
     width: 100%;
-    background: linear-gradient(90deg, $primary-color, #ff76aa);
-    color: $white;
-    padding: 24px 0;
+    padding: 60px 0;
     display: flex;
     align-items: center;
   }
 
   .works__skills-track {
     display: flex;
-    gap: 48px;
+    gap: 64px;
     white-space: nowrap;
-    animation: scroll-skills 25s linear infinite;
+    animation: scroll-skills 30s linear infinite;
   }
 
   .works__skill {
-    font-size: 1.2rem;
-    padding: 0 12px;
+    @include body-text($font-size-base, $font-weight-normal);
+    color: $text-tertiary;
+    padding: 0 16px;
     display: inline-block;
+    letter-spacing: 0.02em;
   }
 
   @keyframes scroll-skills {
@@ -221,12 +221,13 @@ export default {
   }
 
   &__container {
-    padding: 52px 24px;
+    padding: $spacing-3xl $spacing-lg;
   }
 
   &__header {
     text-align: center;
     margin-bottom: $spacing-3xl;
+    padding-bottom: $spacing-lg;
     @include slide-up;
   }
 
@@ -259,39 +260,36 @@ export default {
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: $spacing-2xl;
-    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 52px;
-
-    @media (max-width: $breakpoint-md) {
-      grid-template-columns: 1fr;
-      gap: $spacing-xl;
-    }
+    padding-bottom: $spacing-3xl;
   }
 
   &__project {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(252, 68, 135, 0.14);
-    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 16px 48px rgba(252, 68, 135, 0.07);
-    backdrop-filter: blur(12px);
-    transition: transform $transition-normal, box-shadow $transition-normal, border-color $transition-normal;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    transition: transform $transition-normal, box-shadow $transition-normal;
     cursor: pointer;
 
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 28px 64px rgba(252, 68, 135, 0.14);
-      border-color: rgba(252, 68, 135, 0.28);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
 
       .works__project-cta {
         color: $primary-hover;
+      }
+
+      .works__project-image img {
+        transform: scale(1.05);
       }
     }
 
@@ -299,31 +297,54 @@ export default {
       outline: 3px solid $primary-color;
       outline-offset: 3px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+    }
   }
 
   &__project-image {
-    height: 220px;
+    width: 320px;
+    flex-shrink: 0;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0f5;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    > div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      height: 220px;
     }
   }
 
   &__project-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, $primary-color, $primary-hover);
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
     @include flex-center;
     position: relative;
   }
 
   &__project-number {
     @include heading-style($font-size-4xl, $font-weight-normal);
-    color: $white;
-    opacity: 0.8;
+    color: $text-tertiary;
+    opacity: 0.5;
   }
 
   &__project-content {
@@ -331,7 +352,7 @@ export default {
     flex-direction: column;
     flex: 1;
     padding: $spacing-xl;
-    gap: $spacing-lg;
+    gap: $spacing-sm;
   }
 
   &__project-meta {
@@ -395,11 +416,11 @@ export default {
 
   &__project-tag {
     @include body-text($font-size-xs, $font-weight-medium);
-    background: rgba(252, 68, 135, 0.06);
-    color: $primary-color;
-    padding: 0.5rem 0.85rem;
+    background: rgba(0, 0, 0, 0.04);
+    color: $text-secondary;
+    padding: 0.25rem 0.85rem;
     border-radius: $border-radius-full;
-    border: 1px solid rgba(252, 68, 135, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   &__project-cta {

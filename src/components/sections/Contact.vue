@@ -172,9 +172,7 @@ export default {
 
 .contact {
   @include section-padding;
-  background:
-    radial-gradient(circle at bottom right, rgba(252, 68, 135, 0.12), transparent 28%),
-    linear-gradient(180deg, #ffffff 0%, #fff8fb 100%);
+  background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%);
   
   &__container {
     @include container;
@@ -182,7 +180,8 @@ export default {
   
   &__header {
     text-align: center;
-    margin-bottom: $spacing-3xl;
+    margin-bottom: $spacing-2xl;
+    padding-bottom: $spacing-lg;
     @include slide-up;
   }
 
@@ -274,19 +273,19 @@ export default {
     margin: auto;
     max-width: 600px;
     width: 100%;
-    padding: $spacing-2xl;
+    padding: 2rem;
     border-radius: 28px;
     background: rgba(255, 255, 255, 0.82);
     border: 1px solid rgba(252, 68, 135, 0.14);
     box-shadow: 0 18px 45px rgba(252, 68, 135, 0.08);
 
     @media (max-width: $breakpoint-sm) {
-      padding: $spacing-lg;
+      padding: $spacing-xl $spacing-lg;
     }
   }
   
   &__form-group {
-    margin-bottom: $spacing-lg;
+    margin-bottom: $spacing-xl;
   }
   
   &__form-label {

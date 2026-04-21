@@ -125,8 +125,7 @@ export default {
 
 .about {
   @include section-padding;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(252, 68, 135, 0.12) 0%, rgba(255, 229, 239, 0.7) 34%, #fff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
   
   &__container {
     @include container;
@@ -137,15 +136,15 @@ export default {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: $spacing-4xl;
+    gap: $spacing-3xl;
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-    padding: $spacing-xl 0;
+    padding: $spacing-2xl 0;
     
     @media (max-width: $breakpoint-lg) {
       grid-template-columns: 1fr;
-      gap: $spacing-3xl;
+      gap: $spacing-2xl;
       text-align: center;
     }
   }
@@ -154,7 +153,7 @@ export default {
   &__heading {
     display: flex;
     flex-direction: column;
-    gap: 52px;
+    gap: $spacing-2xl;
     @include fade-in(0.8s);
     animation-delay: 0.2s;
     animation-fill-mode: both;
@@ -241,7 +240,7 @@ export default {
     animation-delay: 0.2s;
     animation-fill-mode: both;
     max-width: 760px;
-    padding: $spacing-2xl;
+    padding: $spacing-2xl $spacing-3xl;
     border-radius: 32px;
     background: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(252, 68, 135, 0.16);
@@ -249,17 +248,17 @@ export default {
     backdrop-filter: blur(10px);
 
     @media (max-width: $breakpoint-sm) {
-      padding: $spacing-lg;
+      padding: $spacing-xl $spacing-lg;
     }
   }
   
   &__description {
-    margin-bottom: $spacing-3xl;
+    margin-bottom: $spacing-2xl;
     
     p {
       @include body-text($font-size-lg, $font-weight-normal);
-      margin-bottom: $spacing-lg;
-      line-height: 1.7;
+      margin-bottom: $spacing-md;
+      line-height: 1.75;
       color: $text-primary;
 
       @media (max-width: $breakpoint-sm) {
@@ -275,15 +274,91 @@ export default {
     }
   }
   
+  &__traits {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__trait {
+    @include body-text($font-size-sm, $font-weight-medium);
+    color: $primary-color;
+    background: rgba(252, 68, 135, 0.08);
+    border: 1px solid rgba(252, 68, 135, 0.16);
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-full;
+  }
+
   &__cta {
     display: flex;
-    justify-content: center;;
+    justify-content: center;
     gap: $spacing-md;
     flex-wrap: wrap;
     
     @media (max-width: $breakpoint-sm) {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-md;
+    width: 100%;
+    max-width: 900px;
+    @include fade-in(0.8s);
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-sm;
+    }
+  }
+
+  &__gallery-item {
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(252, 68, 135, 0.1);
+    border: 1px solid rgba(252, 68, 135, 0.12);
+    transition: transform $transition-normal, box-shadow $transition-normal;
+
+    &:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 48px rgba(252, 68, 135, 0.16);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--1 {
+      transform: rotate(-2deg);
+      &:hover { transform: rotate(0deg) translateY(-4px) scale(1.02); }
+    }
+
+    &--2 {
+      transform: rotate(1.5deg);
+      &:hover { transform: rotate(0deg) translateY(-4px) scale(1.02); }
+    }
+
+    &--3 {
+      transform: rotate(-1deg);
+      &:hover { transform: rotate(0deg) translateY(-4px) scale(1.02); }
+    }
+
+    &--4 {
+      transform: rotate(2deg);
+      &:hover { transform: rotate(0deg) translateY(-4px) scale(1.02); }
     }
   }
 }

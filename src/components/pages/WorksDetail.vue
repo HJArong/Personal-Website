@@ -35,10 +35,6 @@
         <section class="works-detail__section">
           <h2>Process</h2>
           <div v-html="project.process"></div>
-          <div class="works-detail__image-grid">
-            <div class="works-detail__image-placeholder">Image Here</div>
-            <div class="works-detail__image-placeholder">Image Here</div>
-          </div>
         </section>
 
         <section class="works-detail__section">
@@ -85,9 +81,7 @@ export default {
 
 .works-detail {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top right, rgba(252, 68, 135, 0.1), transparent 28%),
-    linear-gradient(180deg, #fff8fb 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
   padding: $spacing-2xl 0;
   
   &__container {
@@ -108,9 +102,9 @@ export default {
     margin-bottom: $spacing-3xl;
     padding: $spacing-xl;
     border-radius: 28px;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(252, 68, 135, 0.14);
-    box-shadow: 0 20px 50px rgba(252, 68, 135, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
   }
   
   &__title {
@@ -140,12 +134,13 @@ export default {
   &__section {
     padding: $spacing-xl;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(252, 68, 135, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
 
     h2 {
       @include heading-style($font-size-2xl, $font-weight-medium);
-      color: $primary-color;
+      color: $text-primary;
       margin-bottom: $spacing-lg;
     }
     
@@ -196,16 +191,6 @@ export default {
     img {
       width: 100%;
       object-fit: cover;
-    }
-  }
-  
-  &__image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $spacing-lg;
-    
-    @media (max-width: $breakpoint-md) {
-      grid-template-columns: 1fr;
     }
   }
 }

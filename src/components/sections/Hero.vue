@@ -1,7 +1,11 @@
 <template>
   <section id="hero" class="hero">
-    <div class="hero__glow hero__glow--left"></div>
-    <div class="hero__glow hero__glow--right"></div>
+    <div class="hero__blobs">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+      <div class="hero__blob hero__blob--4"></div>
+    </div>
 
     <div class="hero-container">
       <p class="hero-container__eyebrow">UX Engineer • Designer • Frontend Developer</p>
@@ -53,25 +57,108 @@ export default {
     radial-gradient(circle at top, rgba(252, 68, 135, 0.16), transparent 40%),
     linear-gradient(180deg, #fff8fb 0%, #fff 52%, #fff5f8 100%);
 
-  &__glow {
+  &__blobs {
     position: absolute;
-    width: 360px;
-    height: 360px;
-    border-radius: 50%;
-    filter: blur(32px);
-    opacity: 0.7;
+    inset: 0;
+    overflow: hidden;
     pointer-events: none;
+  }
 
-    &--left {
-      top: 110px;
-      left: -120px;
-      background: rgba(252, 68, 135, 0.18);
+  &__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    will-change: transform;
+
+    &--1 {
+      width: 400px;
+      height: 400px;
+      top: -80px;
+      left: -100px;
+      background: rgba(252, 68, 135, 0.22);
+      animation: blob-drift-1 20s ease-in-out infinite;
     }
 
-    &--right {
-      right: -110px;
-      bottom: 40px;
-      background: rgba(255, 179, 209, 0.45);
+    &--2 {
+      width: 320px;
+      height: 320px;
+      top: 20%;
+      right: -80px;
+      background: rgba(255, 150, 190, 0.35);
+      animation: blob-drift-2 25s ease-in-out infinite;
+    }
+
+    &--3 {
+      width: 280px;
+      height: 280px;
+      bottom: 10%;
+      left: 15%;
+      background: rgba(252, 68, 135, 0.15);
+      animation: blob-drift-3 22s ease-in-out infinite;
+    }
+
+    &--4 {
+      width: 200px;
+      height: 200px;
+      bottom: -60px;
+      right: 20%;
+      background: rgba(255, 180, 210, 0.4);
+      animation: blob-drift-4 18s ease-in-out infinite;
+    }
+  }
+
+  @keyframes blob-drift-1 {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(30px, 40px) scale(1.05);
+    }
+    50% {
+      transform: translate(60px, 20px) scale(0.95);
+    }
+    75% {
+      transform: translate(20px, -30px) scale(1.02);
+    }
+  }
+
+  @keyframes blob-drift-2 {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(-40px, 50px) scale(1.08);
+    }
+    66% {
+      transform: translate(-20px, -40px) scale(0.92);
+    }
+  }
+
+  @keyframes blob-drift-3 {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    20% {
+      transform: translate(50px, -20px) scale(0.95);
+    }
+    40% {
+      transform: translate(30px, 40px) scale(1.1);
+    }
+    60% {
+      transform: translate(-30px, 30px) scale(1);
+    }
+    80% {
+      transform: translate(-20px, -10px) scale(1.05);
+    }
+  }
+
+  @keyframes blob-drift-4 {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-50px, -30px) scale(1.15);
     }
   }
 
@@ -83,7 +170,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: $spacing-lg;
+    gap: $spacing-xl;
     text-align: center;
 
     &__eyebrow {
@@ -125,20 +212,20 @@ export default {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: $spacing-md;
-      margin-top: $spacing-xl;
+      gap: $spacing-lg;
+      margin-top: $spacing-2xl;
 
       @media (max-width: $breakpoint-md) {
         grid-template-columns: 1fr;
-        gap: $spacing-sm;
+        gap: $spacing-md;
       }
     }
 
     &__highlight {
       display: flex;
       flex-direction: column;
-      gap: $spacing-xs;
-      padding: $spacing-lg $spacing-xl;
+      gap: $spacing-sm;
+      padding: $spacing-xl $spacing-2xl;
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.75);
       border: 1px solid rgba(252, 68, 135, 0.12);

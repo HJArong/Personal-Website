@@ -7,40 +7,50 @@
           size="medium"
           @click="goBack"
         >
-          ← Back to Portfolio
+          &larr; Back to Portfolio
         </Button>
         <h1 class="about-detail__title">About Me</h1>
       </header>
       <div class="about-detail__container-contents">
-        <ContentSection
-          section-title="More about me"
-          color="accent"
-        >
-          <p class="body-text">
-            I design with empathy and build with precision, turning ideas into interfaces that
-            feel as good as they look. I&apos;m on a never-ending quest to make my work a little more
-            beautiful, a lot more usable, and sprinkled with just the right amount of
-            “<span class="primary-color">ooh, that’s pretty ✨</span>”
-          </p>
-          <p class="body-text">
-            My sweet spot is where clean code meets human-centered design, creating products that are
-            not just usable, but enjoyable.
-          </p>
-          <div class="group">
-            <p class="body-text">
-              While working my craft, I like:
-            </p>
-            <div class="hobbies-grid">
-              <div
-                v-for="item in hobbiesItem"
-                :key="item"
-                class="hobbies-grid__item"
-              >
-                {{ item }}
-              </div>
+        <section class="about-detail__intro">
+          <div class="about-detail__intro-images">
+            <div class="about-detail__intro-image about-detail__intro-image--1">
+              <img src="../../images/about-images/IMG_20250329_191726 (1).jpg" alt="Hazel exploring" />
+            </div>
+            <div class="about-detail__intro-image about-detail__intro-image--2">
+              <img src="../../images/about-images/IMG_20250905_185650.jpg" alt="Hazel moment" />
+            </div>
+            <div class="about-detail__intro-image about-detail__intro-image--3">
+              <img src="../../images/about-images/IMG_20251214_103628~2.jpg" alt="Hazel adventure" />
+            </div>
+            <div class="about-detail__intro-image about-detail__intro-image--4">
+              <img src="../../images/about-images/IMG_20260416_094917.jpg" alt="Hazel travels" />
             </div>
           </div>
-        </ContentSection>
+          <div class="about-detail__intro-content">
+            <p class="about-detail__intro-eyebrow">More about me</p>
+            <h2 class="about-detail__intro-title">Designing with heart, building with intention</h2>
+            <p class="body-text">
+              I design with empathy and build with precision, turning ideas into interfaces that
+              feel as good as they look. I&apos;m on a never-ending quest to make my work a little more
+              beautiful, a lot more usable, and sprinkled with just the right amount of
+              &quot;<span class="primary-color">ooh, that&apos;s pretty</span>&quot;
+            </p>
+            <p class="body-text">
+              My sweet spot is where clean code meets human-centered design, creating products that are
+              not just usable, but enjoyable.
+            </p>
+            <p class="body-text">
+              Outside of work, I love to explore new places and discover their local food scenes.
+              There&apos;s something magical about wandering through unfamiliar streets, finding hidden
+              gems, and tasting flavors that tell stories of culture and tradition.
+            </p>
+            <div class="about-detail__intro-traits">
+              <span class="about-detail__intro-trait">Capricorn</span>
+              <span class="about-detail__intro-trait">INTJ</span>
+            </div>
+          </div>
+        </section>
         <ContentSection
           section-title="Skills and expertise"
           color="accent"
@@ -129,7 +139,7 @@
               I enjoy creating calm, human-centered digital experiences that balance beauty,
               accessibility, and performance. I&apos;m also exploring Web3 design, focusing on how to simplify complex
               blockchain concepts and create intuitive, human-centered experiences for decentralized platforms.
-              I&apos;m championing a “pink energy” ethos by delivering work that feels empathetic, uplifting, and quietly
+              I&apos;m championing a &quot;pink energy&quot; ethos by delivering work that feels empathetic, uplifting, and quietly
               powerful.
             </p>
           </div>
@@ -139,7 +149,7 @@
           color="accent"
         >
           <p class="body-text">
-            Still in the first chapters of my career, I’ve made it a priority to step beyond the comfort of my
+            Still in the first chapters of my career, I&apos;ve made it a priority to step beyond the comfort of my
             desk by speaking at events and workshops, attending conferences, and seeking out rooms that challenge
             me to grow. These experiences have not only strengthened my confidence and communication skills but
             also deepened my understanding of how design impacts real people, teams, and communities.
@@ -149,7 +159,7 @@
 
       <section class="about-detail__section">
         <div class="about-detail__cta">
-          <h2>Let's Connect</h2>
+          <h2>Let&apos;s Connect</h2>
           <p class="body-text">
             I&apos;m always excited to collaborate on interesting projects and connect with 
             fellow designers and developers. Whether you want to discuss a potential 
@@ -192,14 +202,6 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      hobbiesItem: [
-        '☕  A good hot cup of coffee',
-        '🎵  Blasting my EDM playlist',
-        '🧘  A quiet environment',
-        '💋  Reapplying my gloss',
-        '🍫  A few pieces of chocolate',
-        '💧  Ion drink'
-      ],
       skillsItem: [
         'UX Design',
         'UI Design',
@@ -231,10 +233,6 @@ export default {
     isMobile() {
       return this.windowWidth <= 640;
     }
-  },
-
-  mounted() {
-    this.animateSkillMeters()
   },
 
   mounted() {
@@ -271,10 +269,10 @@ export default {
         if (worksElement) {
           worksElement.scrollIntoView({ behavior: 'smooth' })
         }
-             }, 100)
-     },
-   }
- }
+      }, 100)
+    },
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -316,7 +314,6 @@ export default {
     @include container;
     max-width: $container-width;
     margin: 0 auto;
-    // padding: $spacing-3xl 0;
 
     &-contents {
       @include fade-in(0.8s);
@@ -348,6 +345,92 @@ export default {
     @include heading-style($font-size-5xl, $font-weight-normal);
     color: $text-primary;
     margin: 24px 0 0 0;
+  }
+
+  &__intro {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: $spacing-3xl;
+    margin-bottom: $spacing-3xl;
+    padding: $spacing-2xl;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr;
+      gap: $spacing-2xl;
+    }
+  }
+
+  &__intro-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    height: max-content;
+    margin: auto;
+    gap: $spacing-md;
+
+    @media (max-width: $breakpoint-sm) {
+      gap: $spacing-sm;
+    }
+  }
+
+  &__intro-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    aspect-ratio: 3 / 4;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    justify-content: center;
+  }
+
+  &__intro-eyebrow {
+    @include body-text($font-size-sm, $font-weight-semibold);
+    color: $text-tertiary;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 !important;
+  }
+
+  &__intro-title {
+    @include heading-style($font-size-3xl, $font-weight-normal);
+    color: $text-primary;
+    margin: 0;
+    line-height: 1.25;
+
+    @media (max-width: $breakpoint-md) {
+      @include heading-style($font-size-2xl, $font-weight-normal);
+    }
+  }
+
+  &__intro-traits {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-sm;
+  }
+
+  &__intro-trait {
+    @include body-text($font-size-sm, $font-weight-medium);
+    color: $text-secondary;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-full;
   }
 
   .wip {
@@ -478,29 +561,27 @@ export default {
   
   &__cta {
     text-align: center;
-    padding: $spacing-4xl;
+    padding: $spacing-3xl $spacing-2xl;
     background-color: $white;
     border-radius: $border-radius-lg;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
     @media (max-width: $breakpoint-md) {
-      padding: 24px;
+      padding: $spacing-2xl $spacing-lg;
     }
     
     h2 {
       @include heading-style($font-size-2xl, $font-weight-normal);
       color: $text-primary;
-      margin-bottom: $spacing-lg;
+      margin-bottom: $spacing-md;
     }
     
     p {
       @include body-text($font-size-base, $font-weight-normal);
       line-height: 1.7;
-      color: $text-primary;
-      margin-bottom: $spacing-2xl;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      color: $text-secondary;
+      max-width: 560px;
+      margin: 0 auto $spacing-2xl;
     }
   }
   
@@ -509,6 +590,7 @@ export default {
     gap: $spacing-md;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: $spacing-lg;
   }
 }
-</style> 
+</style>

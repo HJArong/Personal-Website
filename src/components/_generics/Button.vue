@@ -64,18 +64,18 @@ export default {
     
     // Size variants
     &--small {
-      padding: $spacing-xs $spacing-md;
-      font-size: $font-size-sm;
+      padding: 0.5rem 1rem;
+      font-size: $font-size-xs;
     }
     
     &--medium {
-      padding: $spacing-sm $spacing-lg;
-      font-size: $font-size-base;
+      padding: 0.65rem 1.25rem;
+      font-size: $font-size-sm;
     }
     
     &--large {
-      padding: $spacing-md $spacing-xl;
-      font-size: $font-size-lg;
+      padding: 0.8rem 1.6rem;
+      font-size: $font-size-base;
     }
     
     // Variant styles
@@ -94,7 +94,7 @@ export default {
     // Disabled state
     &--disabled {
       cursor: not-allowed;
-      opacity: 0.6;
+      pointer-events: none;
     }
   }
 </style> 
