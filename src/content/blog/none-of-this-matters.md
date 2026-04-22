@@ -34,7 +34,7 @@ If I don’t ship the feature today, the world will not collapse. The world will
 
 And for a moment, everything felt lighter and easier.
 
-Because the truth is, we carry our work like it’s everything we’ll ever be. We assign it this invisible weight—like every task is critical, every outcome is permanent, and every wrong step will redefine who we are.
+Because the truth is, we carry our work like it’s everything we’ll ever be. We assign it this invisible weight as if every task is critical, every outcome is permanent, and every wrong step will redefine who we are.
 
 But zoom out 200%, and everything softens.
 
