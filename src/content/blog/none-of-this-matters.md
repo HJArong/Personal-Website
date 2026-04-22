@@ -1,12 +1,12 @@
 ---
 id: 4
-slug: none-of-this-matters
+slug: none-of-this-matters-revisited
 category: Reflections
 date: April 2026
-readTime: 4 min read
+readTime: 5 min read
 title: None of This Matters (And Somehow, That Helps)
-excerpt: A quiet realization during a morning commute about work, pressure, and learning to care without carrying everything.
-intro: I like my job and I care about the work I do. But somewhere between planning my day and untangling edge cases, a thought appeared: none of this actually holds the world together.
+excerpt: A morning commute realization about work, pressure, and learning to care without letting it define everything.
+intro: I like my job and I care about the work I do, but somewhere between planning my day and anticipating edge cases, a thought appeared that changed how I carry it all.
 tags:
   - Reflection
   - Work
@@ -16,54 +16,54 @@ tags:
 
 ## A thought on the way to work
 
-I was on my way to the office, half-awake, already rehearsing my day in my head.
+I was on my way to the office, half-awake, doing a rundown of what I’ll do today at work, will my coffee today be capuccino or hazelnut latte.
 
-There’s a task waiting. A feature to ship. Decisions to make. Deadlines quietly looming in the background like they always do.
+There’s a task waiting. An AI chatbot for a financing company. On top of that, other deadlines are quietly looming in the background for other projects I am handling as well.
 
-I like my job. I care about the work I do. I take pride in doing things well and making stuff look and feel nice, in building something that works, something that lasts… well, at least for a while. That part is real to me.
+I know the first part sounded depressing and sad, but honestly, I like my job. I care about the creative work that I do. I take pride in making stuff look and feel nice. I like creating something that works—something that lasts (well, at least for a while).
 
-But somewhere between planning my next steps and mentally untangling edge cases, a thought slipped in. Quietly, steadily, almost relieving:
+But somewhere between planning the things I’ll do and mentally anticipating edge cases that may arise, a thought slipped in—quietly, steadily, and almost relieving:
 
 > **None of this matters**.
 
 ## Perspective, not indifference
 
-Not in a dismissive way. Not in a “why even try” kind of way. Just… plainly.
+I do not mean it in a dismissive way or in a “why even try” kind of way. Just… plainly.
 
-If I don’t ship the feature today, the world will not collapse. The tectonic plates won’t shift. The sky won’t fall. The sun will rise tomorrow, indifferent and on time.
+If I don’t ship the feature today, the world will not collapse. The world will not go to war. No tectonic plates will shift. The sky won’t fall. The sun will rise tomorrow, unbothered and on time.
 
-And for a moment, everything felt lighter.
+And for a moment, everything felt lighter and easier.
 
-Because the truth is, we carry our work like it’s everything. We assign it this invisible weight—like every task is critical, every outcome permanent, every misstep defining.
+Because the truth is, we carry our work like it’s everything we’ll ever be. We assign it this invisible weight—like every task is critical, every outcome is permanent, and every wrong step will redefine who we are.
 
-But zoom out far enough, everything softens.
+But zoom out 200%, and everything softens.
 
 ## The temporary nature of the work
 
+I heard my boss’s words: *“Let’s finish all the tasks so we can already close this project out.”*
+
 This project will end. This version of the product will evolve. The code will be rewritten, replaced, or perhaps forgotten. Even the things we stress over the most will eventually become just another iteration.
 
-And still, I value my job. I like what I do.
-
-That didn’t change.
+And still, despite all those realizations—that nothing will stay exactly as I made it—I value my job. I like what I do.
 
 If anything, that thought made it clearer.
 
 ## Caring without carrying everything
 
-Because if none of this is holding the world together, then I’m free to care without fear. I can show up fully, do the work thoughtfully, and aim for quality, not because everything depends on it, but because I just want to.
+Because if none of the things I do is holding the world together, then I’m free to care without fear. I can show up fully without feeling like I’m held at gunpoint. I can do the work thoughtfully and aim for quality—not because everything depends on it, but because I simply want it to be.
 
-“None of this matters” isn’t about detaching from responsibility.
+What I meant by “None of this matters” isn’t about detaching from responsibility.
 
 It’s about releasing the unnecessary weight we attach to it.
 
-It’s knowing I can miss a mark and still be okay. That I can take my work seriously without letting it consume me. That I can care deeply without believing everything rests on my shoulders.
+It’s knowing I can mess up and still be okay. That I can take my work seriously without letting it become me. That I can care deeply about my craft without believing everything rests on my shoulders.
 
 ## What shifted
 
-On that ride, somewhere between overthinking and arrival, something shifted.
+On that ride, somewhere between calculating how much time each project gets and thinking about what coffee I’ll grab from the lobby, an existence-defining realization hit.
 
-The work still mattered to me.
+My work still mattered to me.
 
-It just didn’t have to define me.
+But I don’t have to make it my life, nor let it define who I am.
 
-And maybe that’s the kind of balance I’ve been looking for all along.
+And maybe that’s the kind of realization I needed to finally live in a more balanced way.
