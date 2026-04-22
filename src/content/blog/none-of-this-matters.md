@@ -20,9 +20,9 @@ I was on my way to the office, half-awake, doing a rundown of what I’ll do tod
 
 There’s a task waiting. An AI chatbot for a financing company. On top of that, other deadlines are quietly looming in the background for other projects I am handling as well.
 
-I know the first part sounded depressing and sad, but honestly, I like my job. I care about the creative work that I do. I take pride in making stuff look and feel nice. I like creating something that works—something that lasts (well, at least for a while).
+I know the first part sounded depressing and sad, but honestly, I like my job. I care about the creative work that I do. I take pride in making stuff look and feel nice. I like creating something that works and lasts (well, at least for a while).
 
-But somewhere between planning the things I’ll do and mentally anticipating edge cases that may arise, a thought slipped in—quietly, steadily, and almost relieving:
+But somewhere between planning the things I’ll do and mentally anticipating edge cases that may arise, a thought slipped in quietly, steadily, and almost relieving:
 
 > **None of this matters**.
 
@@ -50,7 +50,7 @@ If anything, that thought made it clearer.
 
 ## Caring without carrying everything
 
-Because if none of the things I do is holding the world together, then I’m free to care without fear. I can show up fully without feeling like I’m held at gunpoint. I can do the work thoughtfully and aim for quality—not because everything depends on it, but because I simply want it to be.
+Because if none of the things I do is holding the world together, then I’m free to care without fear. I can show up fully without feeling like I’m held at gunpoint. I can do the work thoughtfully and aim for quality and not because everything depends on it, but because I simply want it to be.
 
 What I meant by “None of this matters” isn’t about detaching from responsibility.
 
