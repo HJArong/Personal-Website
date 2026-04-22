@@ -3,7 +3,7 @@ id: 4
 slug: none-of-this-matters-revisited
 category: Reflections
 date: April 2026
-readTime: 5 min read
+readTime: 6 min read
 title: None of This Matters (And Somehow, That Helps)
 excerpt: A morning commute realization about work, pressure, and learning to care without letting it define everything.
 intro: I like my job and I care about the work I do, but somewhere between planning my day and anticipating edge cases, a thought appeared that changed how I carry it all.
@@ -44,7 +44,7 @@ I heard my boss’s words: *“Let’s finish all the tasks so we can already cl
 
 This project will end. This version of the product will evolve. The code will be rewritten, replaced, or perhaps forgotten. Even the things we stress over the most will eventually become just another iteration.
 
-And still, despite all those realizations—that nothing will stay exactly as I made it—I value my job. I like what I do.
+And still, despite all those realizations that nothing will stay exactly as I made it, I value my job. I like what I do.
 
 If anything, that thought made it clearer.
 
@@ -52,18 +52,12 @@ If anything, that thought made it clearer.
 
 Because if none of the things I do is holding the world together, then I’m free to care without fear. I can show up fully without feeling like I’m held at gunpoint. I can do the work thoughtfully and aim for quality and not because everything depends on it, but because I simply want it to be.
 
-What I meant by “None of this matters” isn’t about detaching from responsibility.
+What I meant by “None of this matters” isn’t about detaching from responsibility. It’s about releasing the unnecessary weight we attach to it.
 
-It’s about releasing the unnecessary weight we attach to it.
-
-It’s knowing I can mess up and still be okay. That I can take my work seriously without letting it become me. That I can care deeply about my craft without believing everything rests on my shoulders.
+It’s knowing I can mess up and still be okay. That I can take my work seriously without letting it become me. That I can care deeply about my creative craft without believing everything rests on my tiny shoulders.
 
 ## What shifted
 
-On that ride, somewhere between calculating how much time each project gets and thinking about what coffee I’ll grab from the lobby, an existence-defining realization hit.
+On that ride, somewhere between calculating how much time each project gets today and deciding what coffee I’ll grab on my way to the office, an existence-defining realization has just hit me quietly (ironic, right).
 
-My work still mattered to me.
-
-But I don’t have to make it my life, nor let it define who I am.
-
-And maybe that’s the kind of realization I needed to finally live in a more balanced way.
+My work still mattered to me but I don’t have to make it my life, nor let it define who I am. I kid you not, it altered how I go through about my day now, I move a little less in a rush, I take time to notice stuff around me, I now spend time viewing the sunset from the office's balcony. And maybe that’s the kind of realization I needed to finally live in a more calm and balanced way.
