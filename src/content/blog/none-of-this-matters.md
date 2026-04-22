@@ -1,6 +1,6 @@
 ---
 id: 4
-slug: none-of-this-matters-revisited
+slug: none-of-this-matters
 category: Reflections
 date: April 2026
 readTime: 6 min read
