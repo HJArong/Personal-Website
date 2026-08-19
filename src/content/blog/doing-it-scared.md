@@ -4,7 +4,7 @@ slug: doing-it-scared
 category: Reflections
 date: August 2026
 readTime: 6 min read
-title: Doing It Scared
+title: I Was Good at My Job. That Was the Problem.
 excerpt: A reflection on leaving comfort, changing jobs, and learning that growth can still happen while I am scared.
 intro: Half a year ago, I realized I had gotten way too comfortable.
 tags:
