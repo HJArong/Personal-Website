@@ -89,6 +89,6 @@ function normalizePost(filePath, rawMarkdown) {
 
 const posts = Object.entries(markdownFiles)
   .map(([filePath, rawMarkdown]) => normalizePost(filePath, rawMarkdown))
-  .sort((firstPost, secondPost) => firstPost.id - secondPost.id)
+  .sort((firstPost, secondPost) => secondPost.id - firstPost.id)
 
 export default posts
